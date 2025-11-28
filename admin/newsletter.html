@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Untitled</title>
+	<meta name="generator" content="BBEdit 8.2" />
+</head>
+<body>
+
+<form name="newsletter" id="newsletter" method="post" enctype="multipart/form-data">
+	<table cellspacing="0" cellpadding="0" style="margin: 0 auto; border-width: 1px; border-style: solid; border-color: #000; background: #fff">
+	<tr>
+		<td style="padding: 4px 6px 0px 4px"><img src="../img/one.gif" border="0" alt=""/></td>
+		<td style="padding: 4px 0px 0px 0px">
+		<!-- Region Selector --!>
+		<select name="region" style="margin-right: 4px; width: 130px; font-size: 11px;">
+			<option value="" selected>Select a region</option>
+			<option value="all">All Regions</option>
+			<option value="hokkaido">Hokkaido</option>
+			<option value="tohoku">Tohoku</option>
+			<option value="kanto">Kanto</option>
+			<option value="chubu">Chubu</option>
+			<option value="kinki">Kinki</option>
+			<option value="chugoku">Chugoku</option>
+			<option value="shikoku">Shikoku</option>
+			<option value="kyushu">Kyushu/Okinawa</option>
+			<option value="outside">Outside Japan</option>
+		</select>
+		<td>
+	</tr>
+	<tr>
+		<td style="padding: 0px 0px 0px 4px"><img src="../img/two.gif" border="0" alt=""/></td>
+		<td style="padding: 0px 0px 0px 2px">
+		<!-- Subject Text Area --!>
+		<input type="text" name="subject" value="Enter a newsletter Subject or Title" style="width: 30em" onfocus="document.newsletter.subject.value = '';"/>
+		<td>
+	</tr>
+	<tr>
+		<td style="padding: 2px 0px 0px 4px; vertical-align: top;"><img src="../img/three.gif" border="0" alt=""/></td>
+		<td style="padding: 0px 4px 0px 0px;">
+		<!-- Body Text Area --!>
+		<textarea name="body" rows="20" cols="60" onfocus="document.newsletter.body.value = '';">Cut and Paste your newsletter content here.  HTML is OK.</textarea>
+		<td>
+	</tr>
+	<tr>
+		<td style="padding: 2px 0px 0px 4px; vertical-align: top;"><img src="../img/three.gif" border="0" alt=""/></td>
+		<td style="padding: 2px 4px 6px 0px;">
+		<!-- Attachment Area --!>
+		<input type="file" name="attachment"/>
+		<td>
+	</tr>
+	<tr>
+		<td></td>
+		<td style="padding-bottom: 4px;">
+		<!-- Submit/Reset Buttons --!>
+		<input type="submit" value="Send newsletter"/>
+		<td>
+	</tr>
+	</table>
+<form>
+</body>
+</html>

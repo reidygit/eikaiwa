@@ -1,0 +1,73 @@
+		<img src="<? print IMG_DIR; ?>image-2.gif" border="0" alt="" class="main" /><br/>
+		
+		<table cellspacing="0" style="margin: 0px 0px 10px 0px; padding: 0px;">
+		<tr>
+			<td style="margin: 0px; padding: 0px; width: 590px;"><img src="<? print IMG_DIR; ?>description_top.gif" border="0" alt="" style="margin: 0px; padding: 0px;" /></td>
+		</tr>
+		<tr>
+			<td style="margin: 0px; padding: 0px; width: 588px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B;"><p style="margin: 0px; padding: 0px 6px 0px 6px; text-align: left;">Want to learn or improve your Japanese? <a href="<? print FREE_PLAYER_URL; ?>" target="newWindow" onclick="javascript: secondwindow = open('<? print FREE_PLAYER_URL; ?>', 'low', 'height=<? print $player_height; ?>,width=357,scrollbars=no'); return false">Tune in</a> to listen &amp; learn immediately OR download Japanese study segments from our <a href="<? print STORE_URL; ?>">MP3 Store</a> to listen to whenever you want.</p></td>
+		</tr>
+		<tr>
+			<td style="margin: 0px; padding: 0px; width: 590px;"><img src="<? print IMG_DIR; ?>description_bottom.gif" border="0" alt="" style="margin: 0px; padding: 0px;" /></td>
+		</tr>
+		</table>
+
+		<table style="margin: 0 auto; padding: 0px; border-collapse: collapse; font-family: Arial; font-size: 12px; text-align: left;">
+		<tr>
+			<td style="margin: 0px; padding: 0px 5px 0px 0px; vertical-align: top;">
+				<div style="width: 290px; height: 23px; padding: 0px; background-image: url(../img/free_tab.gif); background-repeat: no-repeat;"></div>
+				<div style="width: 276px; <? print $cbox_height; ?>padding: 0px 6px 0px 6px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; border-top: 1px solid #C6C47B;">
+					<p style="margin: 0px; padding: 6px 0px 2px 0px; text-align: left; font-weight: bold;">Now Playing:</p>
+					<div style="margin: 0px; padding: 0px; width: 274px; height: 40px; border: 1px solid #C6C47B;"><iframe src="<? print FREE_CURRENT_TRACK; ?>" width="266" height="30" scrolling="no" frameborder="0" style="margin: 0px; padding: 4px;"></iframe></div>
+					<a href="<? print FREE_PLAYER_URL; ?>" target="newWindow" onclick="javascript: secondwindow = open('<? print FREE_PLAYER_URL; ?>', 'low', 'height=<? print $player_height; ?>,width=357,scrollbars=no'); return false"><img src="../img/tune.gif" border="0" alt="Tune In!" style="margin: 0px; padding: 10px 0px 0px 0px;"/></a>
+					<ul style="list-style: none; margin: 0; padding: 6px 0px 0px 0px;">
+						<li><b>nihongo.fm:</b>
+							<ul style="list-style-type: disc; margin: 0; padding: 0px 0px 0px 16px;">
+								<li>It's <font style="color: #8C1414;">FREE!</font></li>
+								<li>AM ~ FM quality</li>
+								<li>20kbps AAC audio</li>
+								<li>Partial Study Segments (Avg. 2 minutes)</li>
+								<li>In-stream Event Info & News</li>
+							</ul>
+						</li>
+					</ul>
+					<p style="margin: 0px; padding: 6px 0px 0px 0px;">
+						<b>Description:</b><br/>
+						Studying Japanese? <b>nihongo.fm</b> plays up-to-date, useful Japanese words, phrases and expressions. Improve your listening comprehension, speaking, build your vocabulary, or learn some new expressions. Tune in, listen, repeat, and learn. <b>nihongo.fm</b> is the perfect FREE solution for anyone wanting to improve their Japanese.
+					</p>
+					<p style="margin: 0px; padding: 6px 0px 6px 0px;">
+						<b>nihongo.fm</b>'s channel content consists of partial study segments. Full length high-quality study segments can be downloaded from the <b>nihongo.fm</b>'s <a href="<? print STORE_URL; ?>" target="new">MP3 Store</a>
+					</p>
+				</div>
+				<div style="width: 290px; height: 14px; padding: 0px; background-image: url(../img/cbox-bottom-2.gif); background-repeat: no-repeat;"></div>
+			</td>
+			<td style="margin: 0px; padding: 0px 0px 0px 5px; vertical-align: top;">
+				<div style="width: 290px; height: 23px; padding: 0px; background-image: url(../img/premium_tab.gif); background-repeat: no-repeat;"></div>
+				<div style="width: 276px; padding: 0px 6px 0px 6px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; border-top: 1px solid #C6C47B;">
+					<p style="margin: 0px; padding: 6px 0px 2px 0px; text-align: left; font-weight: bold;">Today's Top 5:</p>
+					<? include_once("./php/top5.php"); ?>
+					<a href="<? print STORE_URL; ?>" target="new"><img src="../img/launch.gif" border="0" alt="Launch the Store!" style="margin: 0px; padding: 10px 0px 0px 0px;"/></a>
+					<ul style="list-style: none; margin: 0; padding: 6px 0px 0px 0px;">
+						<li><b>nihongo.fm MP3 Store:</b>
+							<ul style="list-style-type: disc; margin: 0; padding: 0px 0px 0px 16px;">
+								<li>Study segments for only <font style="color: #8C1414;">99¢</font> each</li>
+								<li>64kbps MP3 Audio (CD Quality)</li>
+								<li>Full length Study Segments (4 ~ 6 minutes)</li>
+								<li>Commercial Free</li>
+								<li>Listen Anytime ~ Anywhere</li>
+								<li>100's of Study Segments</li>
+							</ul>
+						</li>
+					</ul>
+					<p style="margin: 0px; padding: 6px 0px 0px 0px;">
+						<b>Description:</b><br/>
+						So you've been listening to <b>nihongo.fm</b> but you crave more. You want higher quality audio, longer study segments and the freedom to listen to what you want when you want.  You don't want to hear commercials or our constant silly self-promotion.
+					</p>
+					<p style="margin: 0px; padding: 6px 0px 6px 0px;">
+						<b>nihongo.fm</b>'s <a href="<? print STORE_URL; ?>" target="new">MP3 Store</a> has what you're looking for - full length MP3 Japanese study segments for your iPod, computer or MP3 player.
+					</p>
+				</div>
+				<div style="width: 290px; height: 14px; padding: 0px; background-image: url(../img/cbox-bottom-2.gif); background-repeat: no-repeat;"></div>
+			</td>
+		</tr>
+		</table>

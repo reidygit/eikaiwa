@@ -1,0 +1,66 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title><? print $title; ?></title>
+	<meta name="generator" content="BBEdit 8.2" />
+	
+	<!-- OPENTRACKER HTML START -->
+	<script defer
+	src="http://server1.opentracker.net/?site=www.eikaiwa.fm"></script><noscript><a
+	href="http://www.opentracker.net" target="_blank"><img
+	src="http://img.opentracker.net/?cmd=nojs&site=www.eikaiwa.fm" alt="website
+	counter" border="0"></a> </noscript>
+	<!-- OPENTRACKER HTML END -->
+
+	<style type="text/css">
+	body {
+		background: #C6C47B;
+	}
+	td {
+		margin: 0px; padding: 0px;
+	}
+	</style>
+
+</head>
+
+<body <? print $reload; ?>>
+
+<table style="padding: 0px; border-collapse: collapse;">
+<tr>
+	<td colspan="3"><img src="../img/player_top.gif" border="" alt=""/></td>
+</tr>
+<tr>
+	<td style="width: 26px; background-image: url(../img/player_left.gif); background-repeat: repeat-y;"><img src="../img/player_left.gif" border="" alt=""/></td>
+	<td style="width: 305px; text-align: center; background: #fff;"><iframe id="track" name="track" src="<? print $movie_info; ?>" width="295" height="<? print $iframe_height; ?>" scrolling="no" frameborder="0" style="padding: 0px; margin: 0px;"></iframe></td>
+	<td style="width: 9px; background-image: url(../img/player_right.gif); background-repeat: repeat-y;"><img src="../img/player_right.gif" border="" alt="" style="margin: 0px; padding: 0px;"/></td>
+</tr>
+<tr>
+	<td style="width: 26px; background-image: url(../img/player_left.gif); background-repeat: repeat-y;"><img src="../img/player_left.gif" border="" alt=""/></td>
+	<td style="width: 265px; height: 16px;">
+		<OBJECT CLASSID="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" WIDTH="305" HEIGHT="16" CODEBASE="http://www.apple.com/qtactivex/qtplugin.cab">
+		<PARAM name="SRC" VALUE="<? print $preroll; ?>">
+		<PARAM name="AUTOPLAY" VALUE="true">
+		<PARAM name="CONTROLLER" VALUE="true">
+		<PARAM name="KIOSKMODE" VALUE="true">
+		<PARAM name="VOLUME" VALUE="70">
+		<PARAM name="QTNEXT1" VALUE="<<? print $movie; ?>> T<myself>">
+		<EMBED style="padding: 0px;" SRC="<? print $preroll; ?>" WIDTH="305" HEIGHT="16" AUTOPLAY="true" CONTROLLER="true" KIOSKMODE="true" VOLUME="70" PLUGINSPAGE="http://www.apple.com/quicktime/download/" QTNEXT1="<<? print $movie; ?>> T<myself>"></EMBED>
+		</OBJECT>
+	</td>
+	<td style="width: 9px; background-image: url(../img/player_right.gif); background-repeat: repeat-y;"><img src="../img/player_right.gif" border="" alt="" style="margin: 0px; padding: 0px;"/></td>
+</tr>
+<tr>
+	<td style="width: 26px; background-image: url(../img/player_left.gif); background-repeat: repeat-y;"><img src="../img/player_left.gif" border="" alt=""/></td>
+	<td style="width: 265px; height: 21px; padding: 0px; margin: 0px; text-align: center; font-family: arial; font-size: 12px; color: #fff; background-image: url(../img/track_button_back.gif); background-repeat: repeat-x;">eikaiwa.fm</td>
+	<td style="width: 9px; background-image: url(../img/player_right.gif); background-repeat: repeat-y;"><img src="../img/player_right.gif" border="" alt="" style="margin: 0px; padding: 0px;"/></td>
+</tr>
+<tr>
+	<td colspan="3"><img src="../img/player_bottom.gif" border="" alt=""/></td>
+</tr>
+</table>
+
+</body>
+</html>

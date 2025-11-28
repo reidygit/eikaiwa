@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Untitled</title>
+	<meta name="generator" content="BBEdit 8.2" />
+	
+	<style>
+	table
+	{
+		font-family: arial, helvetica, sans-serif; 
+		font-size: 12px;
+		border-style: solid; 
+		border-color: #777; 
+		border-width: 1px; 
+	}
+	td.left
+	{
+		padding: 4px 6px 0px 6px; 
+		text-align: right;
+		vertical-align: top;
+		color: #8C1414; 
+		border-bottom-style: dashed; 
+		border-bottom-color: #777; 
+		border-bottom-width: 1px; 
+		background: #EBE4B5;
+	}
+	td.left-bottom
+	{
+		padding: 4px 6px 0px 6px; 
+		text-align: right;
+		vertical-align: top;
+		color: #8C1414; 
+		background: #EBE4B5;
+	}
+	td.right
+	{
+		padding: 5px 6px 0px 6px; 
+		text-align: left; 
+		vertical-align: top;
+		font-size: 10px; 
+		color: #777; 		
+		border-bottom-style: dashed; 
+		border-bottom-color: #777; 
+		border-bottom-width: 1px; 
+		background: #EBE4B5;
+	}
+	td.right-bottom
+	{
+		padding: 0px 6px 0px 6px; 
+		text-align: left; 
+		font-size: 10px; 
+		color: #777; 		
+		background: #EBE4B5;
+	}
+	td.center
+	{
+		padding: 0px 4px 0px 4px;
+		text-align: left;
+		background: #EBE4B5;
+	}
+	textarea.long
+	{
+		margin: 1px 0px 2px 0px;
+		width: 200px;
+		height: 70px;
+	}
+	textarea.short
+	{
+		margin: 1px 0px 2px 0px;
+		width: 200px;
+		height: 40px;
+	}
+	input.regular
+	{
+		width: 200px;
+	}
+	</style>
+</head>
+<body>
+
+<form method="post">
+<input type="hidden" name="channel_id" value="2">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td class="left-bottom">What would you like to do?</td>
+	<td class="center">
+		<select name="action" onchange="this.form.submit();" style="font-size: 12px;">
+		<option value="" selected>select an option</option>
+		<option value="">-----------------</option>
+		<option value="edit_channel">edit podcast info</option>
+		<option value="">-----------------</option>
+		<option value="add">add a new pod episode</option>
+		<option value="edit">edit a pod episode</option>
+		<option value="del">delete a pod episode</option>
+		</select>
+	</td>
+</tr>
+</table>
+</form>
+
+<?php if ($action == "edit" || $action == "edit_item") { ?>
+<form method="post">
+<input type="hidden" name="action" value="edit_item">
+<input type="hidden" name="channel_id" value="<?php print $_POST['channel_id']; ?>">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td class="left">Choose a pod episode to edit:</td>
+	<td class="center"><?php itemSelector($_POST["channel_id"]); ?></td>
+</tr>
+<tr>
+	<td class="left-bottom"></td>
+	<td class="center"><input type="submit" value="edit selected!"/></td>
+</tr>
+</table>
+</form>
+<? } ?>
+
+<?php if ($action == "del") { ?>
+<form method="post">
+<input type="hidden" name="action" value="del_item">
+<input type="hidden" name="channel_id" value="<?php print $_POST['channel_id']; ?>">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td class="left">Choose a pod episode to delete:</td>
+	<td class="center"><?php itemSelector($_POST["channel_id"]); ?></td>
+</tr>
+<tr>
+	<td class="left-bottom"></td>
+	<td class="center"><input type="submit" value="delete selected!"/></td>
+</tr>
+</table>
+</form>
+<? } ?>
+
+</body>
+</html>

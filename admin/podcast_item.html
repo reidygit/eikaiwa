@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Untitled</title>
+	<meta name="generator" content="BBEdit 8.2" />
+	
+	<style>
+	table
+	{
+		font-family: arial, helvetica, sans-serif; 
+		font-size: 12px;
+		border-style: solid; 
+		border-color: #777; 
+		border-width: 1px; 
+	}
+	td.left
+	{
+		padding: 4px 6px 0px 6px; 
+		text-align: right;
+		vertical-align: top;
+		color: #8C1414; 
+		border-bottom-style: dashed; 
+		border-bottom-color: #777; 
+		border-bottom-width: 1px; 
+		background: #EBE4B5;
+	}
+	td.left-bottom
+	{
+		padding: 4px 6px 0px 6px; 
+		text-align: right;
+		vertical-align: top;
+		color: #8C1414; 
+		background: #EBE4B5;
+	}
+	td.right
+	{
+		padding: 5px 6px 0px 6px; 
+		text-align: left; 
+		vertical-align: top;
+		font-size: 10px; 
+		color: #777; 		
+		border-bottom-style: dashed; 
+		border-bottom-color: #777; 
+		border-bottom-width: 1px; 
+		background: #EBE4B5;
+	}
+	td.right-bottom
+	{
+		padding: 0px 6px 0px 6px; 
+		text-align: left; 
+		font-size: 10px; 
+		color: #777; 		
+		background: #EBE4B5;
+	}
+	td.center
+	{
+		padding: 0px 4px 0px 4px;
+		text-align: left;
+		background: #EBE4B5;
+	}
+	textarea.long
+	{
+		margin: 1px 0px 2px 0px;
+		width: 200px;
+		height: 70px;
+	}
+	textarea.short
+	{
+		margin: 1px 0px 2px 0px;
+		width: 200px;
+		height: 40px;
+	}
+	input.regular
+	{
+		width: 200px;
+	}
+	</style>
+</head>
+<body>
+
+<?php 
+if (isset($_POST["item_id"]) && !empty($_POST["item_id"]))
+{
+	$details = getDetails($_POST["item_id"]);
+	$hidden = "<input type=\"hidden\" name=\"item_id\" value=\"" . $_POST["item_id"] . "\">\n";
+	$hidden_2 = "<input type=\"hidden\" name=\"action\" value=\"update_item\">\n";
+	$hidden_3 = "<input type=\"hidden\" name=\"channel_id\" value=\"" . $_POST["channel_id"] . "\">\n";
+}
+	elseif ($_POST["action"] == "add")
+	{
+		$hidden_2 = "<input type=\"hidden\" name=\"action\" value=\"new_item\">\n";
+		$hidden_3 = "<input type=\"hidden\" name=\"channel_id\" value=\"" . $_POST["channel_id"] . "\">\n";
+	}
+?>
+
+<form method="post">
+<?php if (isset($hidden)) { print $hidden; } ?>
+<?php print $hidden_2; ?>
+<?php print $hidden_3; ?>
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td class="left">Title:</td>
+	<td class="center"><input type="text" name="title" value="<?php print $details[1];?>" class="regular"/></td>
+	<td class="right">episode title <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">Description:</td>
+	<td class="center"><input type="text" name="description" value="<?php print $details[2];?>" class="regular"/></td>
+	<td class="right">episode description <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">Filename:</td>
+	<td class="center"><input type="text" name="filename" value="<?php print $details[3];?>" class="regular"/></td>
+	<td class="right">name of the file for this episode <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">iTunes-Author:</td>
+	<td class="center"><input type="text" name="itunes:author" value="<?php print $details[4];?>" class="regular"/></td>
+	<td class="right">this is shown in the Artist column in iTunes <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">iTunes-Explicit:</td>
+	<td class="center"><select name="itunes:explicit" style="font-size: 12px;"><option value="No" selected>No</option><option value="Yes">Yes</option></select></td>
+	<td class="right">does this podcast contain explicit content? <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">iTunes-List-Description:</td>
+	<td class="center"><textarea name="itunes:subtitle" class="short"><?php print $details[7];?></textarea></td>
+	<td class="right">this is shown in the Description column in iTunes<br/>this is an optional field and may be left blank if you wish<br/>if you leave this field blank the Description Field will be shown in the iTunes description column</td>
+</tr>
+<tr>
+	<td class="left">iTunes-Full-Description:</td>
+	<td class="center"><textarea name="itunes:summary" class="long"><?php print $details[8];?></textarea></td>
+	<td class="right">this is is shown in a separate window that appears <br/>when the ⓘ (circled i) in the Description column is clicked<br/> this is an optional field and may be left blank if you wish</td>
+</tr>
+<tr>
+	<td class="left">iTunes-Duration:</td>
+	<td class="center"><input type="text" name="itunes:duration" value="<?php print $details[9];?>" class="regular"/></td>
+	<td class="right">this is shown in the Time column of iTunes, HH:MM:SS, H:MM:SS, MM:SS, or M:SS <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left-bottom">iTunes-Keywords:</td>
+	<td class="center"><input type="text" name="itunes:keywords" value="<?php print $details[10];?>" class="regular"/></td>
+	<td class="right-bottom">enter any keywords for iTunes text searches, keywords are seperated with spaces</td>
+</tr>
+<tr>
+	<td class="left-bottom"></td>
+	<td class="center"><input type="submit" value="commit"/></td>
+	<td class="right-bottom"></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>

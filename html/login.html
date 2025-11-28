@@ -1,0 +1,41 @@
+﻿<div class="login">
+<table cellpadding="0" cellspacing="0" class="login">
+<tr>
+	<td class="login_top"></td>
+</tr>
+<tr>
+	<td class="login_middle">
+		<form name="login" id="login" method="post" action="" class="login" onsubmit="return loginBox();">
+		<table cellpadding="0" cellspacing="0" class="login_a">
+		<? if (!empty($error_login)) { ?>
+		<tr>
+			<td colspan="2" class="mbox_error"><p class="mbox_error"><?php print $error_login; ?></p></td>
+		</tr>
+		<? } ?>
+		<tr>
+			<td><b>Email:</b></td>
+			<td class="login_a_email"><input type="text" name="email" class="login_email"/></td>
+		</tr>
+		<tr>
+			<td><b>Password:</b></td>
+			<td class="login_a_password"><input type="password" name="password" class="login_password"/></td>
+		</tr>
+		</table>
+		
+		<table cellpadding="0" cellspacing="0" class="login_b">
+		<tr>
+			<td class="login_b_remeber"><input type="checkbox" name="remember" value="on"/> Remember me </td>
+			<td class="login_b_submit"><input type="submit" value="login" class="submit"/></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="login_b_forgot"><a href="<? print PHP_DIR; ?>forgotten_password.php?forgot" target="newWindow" onclick="javascript: secondwindow = open('<? print PHP_DIR; ?>forgotten_password.php?forgot', 'low', 'height=182,width=302,scrollbars=no');  return false" class="forgot_link">Forgot your password?</a></td>
+		</tr>
+		</table>
+		</form>
+	</td>
+</tr>
+<tr>
+	<td class="login_bottom"></td>
+</tr>
+</table>
+</div>

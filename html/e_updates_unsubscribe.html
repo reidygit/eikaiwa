@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=shift_jis" />
+	<title>E-Updates Unsubscribe</title>
+	<meta news letter />
+</head>
+
+<script type="application/x-javascript" language="javascript" charset="shift_jis">
+
+function forgotBox()
+{
+	if (document.unsubscribe.email.value == null || document.unsubscribe.email.value.length == 0)
+	{
+		alert("please fill in your Email address");
+		document.unsubscribe.email.focus()
+		return false;
+	}
+	
+	var email_regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+	if (!document.unsubscribe.email.value.match(email_regex))
+	{
+		alert("please verify your Email address format.");
+		document.unsubscribe.email.focus()
+		return false;
+	}
+}
+
+</script>
+
+
+<body style="background: #EBE4B5;" onload="document.unsubscribe.email.focus()">
+
+<form name="unsubscribe" id="unsubscribe" action="<? print $_SERVER['SCRIPT_NAME'] . '?confirm'; ?>" method="post" onsubmit="return forgotBox()">
+<table cellpadding="0" cellspacing="0" style="width: 250px; margin: 0px auto; text-align: center; vertical-align: top; font-family: arial, helvetica, sans-serif; font-size: 12px; border-width: 1px; border-style: solid; border-color: #C6C47B; background-image: url(../img/cbox_header.gif); background-repeat: repeat-x; background-position: top-left;">
+<tr>
+	<td colspan="2" style="height: 22px; text-align: left; padding: 0px 4px 0px 4px;"><b>eikaiwa.fm E-Updates Unsubscribe</b></td>
+</tr>
+<?php if($error == true){ ?>
+<tr>
+	<td colspan="2" style="text-align: center; padding: 4px 4px 4px 4px; color: red; background: #fff"">The Email address you entered does not have a subscription at nihongo.fm. <br/> Please try again.</td>
+</tr>
+<?php }?>
+<tr>
+	<td colspan="2" style="text-align: left; padding: 4px 4px 0px 4px; background: #fff">
+		<p style="margin-top: 0px;">If you would like to be removed from the nihongo.fm E-Updates mailing list please enter your registered e-mail address below.</p>
+		<p>You will receive one more e-mail from nihongo.fm comfirming that you have been removed from our mailing list.</p>
+	</td>
+</tr>
+<tr>
+	<td style="padding: 4px 0px 0px 4px; background: #fff"><b>Email:</b></td>
+	<td style="text-align: right; padding: 4px 4px 0px 0px; background: #fff"><input type="text" name="email" class="email" id="email"/></td>
+</tr>
+<tr>
+	<td colspan="2" style="text-align: right; padding: 4px 4px 4px 0px; background: #fff"><input type="submit" value="submit"/></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>

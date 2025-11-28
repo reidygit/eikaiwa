@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>eikaiwa.fm E-Updates Unsubscribe</title>
+	<meta news letter />
+
+	<script type="application/x-javascript" language="javascript">
+
+		function forgotBox()
+		{
+			if (document.unsubscribe.unsubscribe_email_address.value == null || document.unsubscribe.email.value.length == 0)
+			{
+				alert("please fill in your Email address");
+				document.unsubscribe.unsubscribe_email_address.focus()
+				return false;
+			}
+			
+			var email_regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+			if (!document.unsubscribe.unsubscribe_email_address.value.match(email_regex))
+			{
+				alert("please verify your Email address format.");
+				document.unsubscribe.unsubscribe_email_address.focus()
+				return false;
+			}
+		}
+	
+	</script>
+
+</head>
+
+<body style="background: #EBE4B5;" onload="document.unsubscribe.email.focus()">
+
+<form name="unsubscribe" id="unsubscribe" method="post" onsubmit="return forgotBox()">
+<div style="margin: 0 auto; width: 262px; height: 25px; text-align: center; background-image: url(../img/unsubscribe.gif); background-repeat: no-repeat;"><p style="margin:0px; padding: 8px 0px 0px 8px; text-align: left; font: bold 12px arial; color: #fff;">nihongo.fm E-Updates Unsubscribe</p></div>
+<div style="margin: 0 auto; width: 260px; text-align: center; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; background: #fff;">
+	<p style="margin:0px; padding: 4px 8px 0px 8px; font: 12px arial; text-align: left;">If you would like to be removed from the nihongo.fm E-Updates mailing list please enter your registered e-mail address below.</p>
+	<p style="margin:0px; padding: 6px 8px 6px 8px; font: 12px arial; text-align: left;">You will receive one more e-mail from nihongo.fm comfirming that you have been removed from our mailing list.</p>
+	<?php if(!empty($response_message)){ ?>
+	<p style="margin:0px; padding: 0px 8px 6px 8px; font: bold 12px arial; text-align: left; color: #8C1414;"><? print $response_message; ?></p>
+	<?php }?>
+	<div style="padding: 4px 0px 4px 8px; width: 40px; float: left; font: 12px arial;"><b>Email:</b></div>
+	<div style="padding: 0px 8px 4px 0px; width: 200px; float: right; text-align: right; font: 12px arial;"><input type="text" name="unsubscribe_email_address" class="email" id="email" style="width: 198px;"/></div>
+	<div style="clear: both;"></div>
+	<p style="margin:0px; padding: 0px 8px 4px 8px; font: 12px arial; text-align: right;"><input type="submit" value="submit" style="margin: 0px;"/></p>
+</div>
+<div style="margin: 0 auto; width: 262px; height: 10px; text-align: center; background-image: url(../img/unsubscribe_bottom.gif); background-repeat: no-repeat;"></div>
+</form>
+
+</body>
+</html>

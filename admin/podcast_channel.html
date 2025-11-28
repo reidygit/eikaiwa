@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+	<title>Untitled</title>
+	<meta name="generator" content="BBEdit 8.2" />
+</head>
+
+<style>
+	table
+	{
+		font-family: arial, helvetica, sans-serif; 
+		font-size: 12px;
+		border-style: solid; 
+		border-color: #777; 
+		border-width: 1px; 
+	}
+	td.left
+	{
+		padding: 4px 6px 0px 6px; 
+		text-align: right;
+		vertical-align: top;
+		color: #8C1414; 
+		border-bottom-style: dashed; 
+		border-bottom-color: #777; 
+		border-bottom-width: 1px; 
+		background: #EBE4B5;
+	}
+	td.left-bottom
+	{
+		padding: 4px 6px 0px 6px; 
+		text-align: right;
+		vertical-align: top;
+		color: #8C1414; 
+		background: #EBE4B5;
+	}
+	td.right
+	{
+		padding: 5px 6px 0px 6px; 
+		text-align: left; 
+		vertical-align: top;
+		font-size: 10px; 
+		color: #777; 		
+		border-bottom-style: dashed; 
+		border-bottom-color: #777; 
+		border-bottom-width: 1px; 
+		background: #EBE4B5;
+	}
+	td.right-bottom
+	{
+		padding: 0px 6px 0px 6px; 
+		text-align: left; 
+		font-size: 10px; 
+		color: #777; 		
+		background: #EBE4B5;
+	}
+	td.center
+	{
+		padding: 0px 4px 0px 4px;
+		text-align: left;
+		background: #EBE4B5;
+	}
+	textarea.long
+	{
+		margin: 1px 0px 2px 0px;
+		width: 200px;
+		height: 70px;
+	}
+	textarea.short
+	{
+		margin: 1px 0px 2px 0px;
+		width: 200px;
+		height: 40px;
+	}
+	input.regular
+	{
+		width: 200px;
+	}
+</style>
+
+<body>
+
+<form method="post">
+
+<?php if (isset($details) && !empty($details)) { print "<input type=\"hidden\" name=\"channel_id\" value=\"" . $details[0] . "\">\n<input type=\"hidden\" name=\"action\" value=\"update_channel\">\n"; } ?>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td class="left">Title:</td>
+	<td class="center"><input type="text" name="title" value="<?php print $details[1];?>" class="regular"/></td>
+	<td class="right">podcast title <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">Link:</td>
+	<td class="center"><input type="text" name="link" value="<?php print $details[2];?>" class="regular"/></td>
+	<td class="right">a link to this podcasts homepage <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">Description:</td>
+	<td class="center"><textarea name="description" class="short"><?php print $details[3];?></textarea></td>
+	<td class="right">a description of this podcast <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">Language:</td>
+	<td class="center">
+		<select name="language">
+			<option value="en-us" <?php if ($details[4] == "en-us") { print "selected"; }?>>English</option>
+			<option value="ja" <?php if ($details[4] == "ja") { print "selected"; }?>>Japanese</option>
+		</select>
+	</td>
+	<td class="right">what language should this podcast be in? <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">Managing Editor:</td>
+	<td class="center"><input type="text" name="managingEditor" value="<?php print $details[5];?>" class="regular"/></td>
+	<td class="right">who is maintaining this podcast, email address <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">Web Master:</td>
+	<td class="center"><input type="text" name="webMaster" value="<?php print $details[6];?>" class="regular"/></td>
+	<td class="right">who to contact when all goes wrong, email address <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">Copyright:</td>
+	<td class="center"><input type="text" name="copyright" value="<?php print $details[7];?>" class="regular"/></td>
+	<td class="right">copyright date for this podcast <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">iTunes-Author:</td>
+	<td class="center"><input type="text" name="itunes:author" value="<?php print $details[8];?>" class="regular"/></td>
+	<td class="right">this is shown in the Artist column in iTunes <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">iTunes-Contact-Name:</td>
+	<td class="center"><input type="text" name="itunes:name" value="<?php print $details[11];?>" class="regular"/></td>
+	<td class="right">this is not visible in iTunes and is used for contact purposes only <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">iTunes-Image:</td>
+	<td class="center"><input type="text" name="itunes:image" value="<?php print $details[12];?>" class="regular"/></td>
+	<td class="right">this specifies the artwork for your podcast. 300px * 300px or larger <font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">iTunes-Description-Column:</td>
+	<td class="center"><textarea name="itunes:subtitle" class="short"><?php print $details[9];?></textarea></td>
+	<td class="right">this is shown in the Description column in iTunes when browsing podcasts<br/><font style="color: red;">(required)</font></td>
+</tr>
+<tr>
+	<td class="left">iTunes-Podcast-Description:</td>
+	<td class="center"><textarea name="itunes:summary" class="long"><?php print $details[10];?></textarea></td>
+	<td class="right">this is is shown in on the iTunes Music Store page for your podcast.<br/>if you omit this field the Description Field will be used instead</td>
+</tr>
+
+<tr>
+	<td class="left-bottom"></td>
+	<td class="center"><input type="submit" value="commit"/></td>
+	<td class="right-bottom"></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>

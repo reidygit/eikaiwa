@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>quick mailer to: <? print $_GET["email"] . $_POST["email"]; ?></title>
+	<meta name="generator" content="BBEdit 8.2" />
+</head>
+<body>
+
+<form name="quick_mailer" id="quick_mailer" method="post" enctype="multipart/form-data">
+<input type="hidden" name="to" value="<? print $_GET["email"]; ?>" />
+<table cellspacing="0" cellpadding="0" style=" border-width: 1px; border-style: solid; border-color: #8C1414; background: #fff">
+<tr>
+	<td style="padding: 8px 8px 0px 11px; font-family: arial, helvetica, sans-serif; font-size: 11px;">
+	<!-- To Area --!>
+	To: <? print $_GET["email"] . $_POST["email"]; ?>
+	<td>
+</tr>
+<tr>
+	<td style="padding: 4px 8px 0px 8px">
+	<!-- From Area --!>
+	<input type="text" name="from" value="From" style="width: 40em" onfocus="document.quick_mailer.from.value = '';"/>
+	<td>
+</tr>
+<tr>
+	<td style="padding: 8px 8px 0px 8px">
+	<!-- Subject Text Area --!>
+	<input type="text" name="subject" value="Subject" style="width: 40em" onfocus="document.quick_mailer.subject.value = '';"/>
+	<td>
+</tr>
+<tr>
+	<td style="padding: 0px 8px 0px 8px;">
+	<!-- Body Text Area --!>
+	<textarea name="body" rows="25" onfocus="document.quick_mailer.body.value = '';" style="width: 40em">Message.  HTML is OK.</textarea>
+	<td>
+</tr>
+<tr>
+	<td style="padding: 8px 8px 0px 8px;">
+	<!-- Attachment Area --!>
+	<input type="file" name="attachment"/>
+	<td>
+</tr>
+<tr>
+	<td style="padding: 4px 8px 8px 8px; text-align: center;">
+	<!-- Submit/Reset Buttons --!>
+	<input type="submit" value="Send mail"/>
+	<td>
+</tr>
+</table>
+<form>
+
+</body>
+</html>

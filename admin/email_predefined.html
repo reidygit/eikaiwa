@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>email editor</title>
+	<meta name="generator" content="BBEdit 8.2" />
+	
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	
+		function check()
+		{
+			document.mail_editor.submit();
+		}
+		
+	// -->
+	</script>
+
+</head>
+<body>
+
+<form name="mail_editor" id="mail_editor" method="post">
+	<table cellspacing="0" cellpadding="0" style="margin: 0 auto; border-width: 1px; border-style: solid; border-color: #000; background: #fff">
+	<tr>
+		<td style="padding: 0px 0px 0px 4px"><img src="../img/two.gif" border="0" alt=""/></td>
+		<td>
+		<!-- Mail Selector --!>
+		<select name="mail_id" onChange="javascript: check();" style="margin-right: 4px; width: 130px; font-size: 11px;">
+			<option value="" <? if (empty($_POST) || isset($_POST['action'])) { print "selected"; } ?>>Select an email</option>
+			<option value="1" <? if ($_POST['mail_id'] == 1 && !isset($_POST['action'])) { print "selected"; } ?>>subscription comfirmation</option>
+			<option value="2" <? if ($_POST['mail_id'] == 2 && !isset($_POST['action'])) { print "selected"; } ?>>subscription cancellation</option>
+			<option value="3" <? if ($_POST['mail_id'] == 3 && !isset($_POST['action'])) { print "selected"; } ?>>subscription renewal</option>
+			<option value="4" <? if ($_POST['mail_id'] == 4 && !isset($_POST['action'])) { print "selected"; } ?>>e-updates</option>
+			<option value="5" <? if ($_POST['mail_id'] == 5 && !isset($_POST['action'])) { print "selected"; } ?>>e-updates unsubscribe</option>
+			<option value="6" <? if ($_POST['mail_id'] == 6 && !isset($_POST['action'])) { print "selected"; } ?>>forgotten password</option>
+		</select>
+		<td>
+	</tr>
+	<tr>
+		<td style="padding: 0px 0px 0px 4px"><img src="../img/two.gif" border="0" alt=""/></td>
+		<td style="padding: 0px 0px 0px 2px">
+		<!-- Subject Text Area --!>
+		<input type="text" name="subject" value="<?php print $mail->subject;?>" style="width: 30em"/>
+		<td>
+	</tr>
+	<tr>
+		<td style="padding: 2px 0px 0px 4px; vertical-align: top;"><img src="../img/three.gif" border="0" alt=""/></td>
+		<td style="padding: 0px 4px 0px 0px;">
+		<!-- Body Text Area --!>
+		<textarea name="body" rows="20" cols="60"><?php print $mail->body;?></textarea>
+		<td>
+	</tr>
+	<tr>
+		<td></td>
+		<td style="padding-bottom: 4px;">
+		<!-- Submit/Reset Buttons --!>
+		<input type="submit" name="action" value="save email"/>
+		<td>
+	</tr>
+	</table>
+<form>
+
+</body>
+</html>

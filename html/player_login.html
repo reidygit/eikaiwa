@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=shift_jis" />
+	<title>PREMIUM eikaiwa.fm Stream</title>
+
+	<script type="application/x-javascript" language="javascript" charset="shift_jis">
+	
+	function loginBox()
+	{
+		if (document.login.email.value == null || document.login.email.value.length == 0)
+		{
+			alert("please fill in your Email address");
+			document.login.email.focus()
+			return false;
+		}
+		
+		var email_regex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+		if (!document.login.email.value.match(email_regex))
+		{
+			alert("please verify your Email address format.");
+			document.login.email.focus()
+			return false;
+		}
+		
+		if (document.login.password.value == null || document.login.password.value.length == 0)
+		{
+			alert("please fill in your Password");
+			document.login.password.focus()
+			return false;
+		}
+	}
+	</script>
+
+	<style type="text/css">
+	body
+	{
+		font-family: arial;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: normal;
+	}
+	table.signup
+	{
+		text-align: center;
+		margin: 0 auto;
+		border-style: solid;
+		border-color: #C6C47B;
+		border-width: 1px;
+		background: #fff;
+	}
+	td.title
+	{
+		height: 22px;
+		padding-left: 10px;
+		padding-right: 10px;
+		background-image: url('../img/cbox_header.gif');
+		background-repeat: repeat-x;
+		border-bottom-style: solid;
+		border-bottom-color: #C6C47B;
+		border-bottom-width: 1px;
+		font-weight: bold;
+		color: #000;
+	}
+	td.left
+	{
+		text-align: left;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	td.right
+	{
+		text-align: right;
+		height: 20px;
+		padding-right: 10px;
+	}
+	td.submit
+	{
+		text-align: right;
+		padding-top: 2px;
+		padding-right: 10px;
+		padding-bottom: 2px;
+	}
+	td.h-space
+	{
+		height: 4px;
+	}
+	td.checkbox
+	{
+		padding-top: 2px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	td.forgot
+	{
+		text-align: center;
+		font-size: 11px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+	}
+	td.bad_login
+	{
+		font-weight: bold;
+		text-align: center;
+		color: red;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.password
+	{
+		font-size: 11px;
+		width: 135px;
+	}
+	.email
+	{
+		width: 135px;
+	}
+	a.forgot_link:link 
+	{
+		color: #CC3333;
+		text-decoration: none;
+	}
+	a.forgot_link:visited 
+	{
+		color: #CC3333;
+		text-decoration: none;
+	}
+	a.forgot_link:hover 
+	{
+		color: #FF0000;
+		text-decoration: underline;
+	}
+	a.forgot_link:active 
+	{
+		color: #FF0000;
+		text-decoration: underline;
+	}
+	</style>
+</head>
+<body style="background: #EBE4B5;" onload="document.login.email.focus();">
+
+<form method="post" name="login" id="login" onsubmit="return loginBox()">
+<table cellspacing="0" cellpadding="0" class="signup">
+<tr>
+	<td colspan="2" class="title">nihongo.fm Premium Stream</td>
+</tr>
+<tr>
+	<td colspan="2" class="h-space"></td>
+</tr>
+<?php if($error == true){ ?>
+<tr>
+	<td colspan="3" class="bad_login">Invalid Email or Password.</td>
+</tr>
+<?php }?>
+<tr>
+	<td class="left">Email:</td>
+	<td class="right"><input type="text" name="email" class="email" id="email"/></td>
+</tr>
+<tr>
+	<td class="left">Password:</td>
+	<td class="right"><input type="password" name="password" class="password" id="password"/></td>
+</tr>
+<tr>
+	<td colspan="2" class="submit"><input type="submit" value="login"/></td>
+</tr>
+<tr>
+	<td colspan="2" class="checkbox"><input type="checkbox" name="forever"/>&nbsp;Remember my ID on this computer</td>
+</tr>
+<tr>
+	<td colspan="2" class="forgot"><a href="../php/player.php?forgot&channel=<?php print $stream;  ?>" class="forgot_link">Forgot your password?</a></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>

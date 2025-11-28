@@ -1,0 +1,71 @@
+		<img src="<? print IMG_DIR; ?>image-2.gif" border="0" alt="" class="main" /><br/>
+		
+		<table cellspacing="0" style="margin: 0px 0px 10px 0px; padding: 0px;">
+		<tr>
+			<td style="margin: 0px; padding: 0px; width: 590px;"><img src="<? print IMG_DIR; ?>description_top.gif" border="0" alt="" style="margin: 0px; padding: 0px;" /></td>
+		</tr>
+		<tr>
+			<td style="margin: 0px; padding: 0px; width: 588px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B;"><p style="margin: 0px; padding: 0px 6px 0px 6px; text-align: left;">もっと英会話を上達したい方、<a href="<? print FREE_PLAYER_URL; ?>" target="newWindow" onclick="javascript: secondwindow = open('<? print FREE_PLAYER_URL; ?>', 'low', 'height=<? print $player_height; ?>,width=357,scrollbars=no'); return false">「無料ラジオ・オンエア中！」</a>を今すぐクリック。さらに<a href="<? print STORE_URL; ?>" target="_blank">「eikaiwa.fmストアー」</a>ではいつでもどこでも勉強できるオーディオ教材（英会話レッスン）がダウンロードできます。</p></td>
+		</tr>
+		<tr>
+			<td style="margin: 0px; padding: 0px; width: 590px;"><img src="<? print IMG_DIR; ?>description_bottom.gif" border="0" alt="" style="margin: 0px; padding: 0px;" /></td>
+		</tr>
+		</table>
+
+		<table style="margin: 0 auto; padding: 0px; border-collapse: collapse; font-family: Arial; font-size: 12px; text-align: left;">
+		<tr>
+			<td style="margin: 0px; padding: 0px 5px 0px 0px; vertical-align: top;">
+				<div style="width: 290px; height: 23px; padding: 0px; background-image: url(../img/free_tab.gif); background-repeat: no-repeat;"></div>
+				
+				<div style="width: 276px; <? print $cbox_height; ?> padding: 0px 6px 0px 6px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; border-top: 1px solid #C6C47B;">
+					
+					<p style="margin: 0px; padding: 6px 0px 2px 0px; text-align: left; font-weight: bold;">只今オンエア中：</p>
+					
+					<div style="margin: 0px; padding: 0px; width: 274px; height: 40px; border: 1px solid #C6C47B;"><iframe src="<? print FREE_CURRENT_TRACK; ?>" width="266" height="30" scrolling="no" frameborder="0" style="margin: 0px; padding: 4px;"></iframe></div>
+					
+					<a href="<? print FREE_PLAYER_URL; ?>" target="newWindow" onclick="javascript: secondwindow = open('<? print FREE_PLAYER_URL; ?>', 'low', 'height=<? print $player_height; ?>,width=357,scrollbars=no'); return false"><img src="../img/tune.gif" border="0" alt="Tune In!" style="margin: 0px; padding: 10px 0px 0px 0px;"/></a>
+					
+					<ul style="list-style: none; margin: 0; padding: 6px 0px 0px 0px;">
+						<li><b>eikaiwa.fm RADIO:</b>
+							<ul style="list-style-type: disc; margin: 0; padding: 0px 0px 0px 16px;">
+								<li><font style="color: #8C1414;">無料</font>オンエア中！</li>
+								<li>FMクォリティ</li>
+								<li>サンプル英会話レッスンが試聴できます（約２分間）</li>
+								<li>英語に関するイベント情報、ニュース、広告等も配信中</li>
+								<li>インターネットのあるところなら２４時間いつでもどこでも</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<p style="margin: 0px; padding: 6px 0px 0px 0px;">TUNE INをクリックして、オンエア放送を繰り返し聴いて、英語のスキルアップを目指しましょう！　eikaiwa.fm RADIO は英語のリスニング・スピーキング・単語力を伸ばし、新しい表現を学ぶための全く新しいの勉強方法です！　eikaiwa.fm RADIO いつでも役に立つ英単語・フレーズをストリーミング配信しています。eikaiwa.fm RADIO はあなたの英語の勉強学習の強い身方、しかも無料です。</p>
+					<p style="margin: 0px; padding: 6px 0px 6px 0px;">eikaiwa.fm Radio ではサンプルレッスンをお届けしています。さらにより良い音質での英会話フルレッスンをご希望の方は、<a href="<? print STORE_URL; ?>" target="_blank">eikaiwa.fmストアー</a>でご購入の上、ダウンロードして下さい。</p>
+				</div>
+				
+				<div style="width: 290px; height: 14px; padding: 0px; background-image: url(../img/cbox-bottom-2.gif); background-repeat: no-repeat;"></div>
+			</td>
+			<td style="margin: 0px; padding: 0px 0px 0px 5px; vertical-align: top;">
+				<div style="width: 290px; height: 23px; padding: 0px; background-image: url(../img/premium_tab.gif); background-repeat: no-repeat;"></div>
+				<div style="width: 276px; <? print $cbox_height; ?> padding: 0px 6px 0px 6px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; border-top: 1px solid #C6C47B;">
+					<p style="margin: 0px; padding: 6px 0px 2px 0px; text-align: left; font-weight: bold;">本日のダウンロードトップ５：</p>
+					<? include_once("./php/top5.php"); ?>
+					<a href="<? print STORE_URL; ?>" target="_blank"><img src="../img/launch.gif" border="0" alt="Launch the Store!" style="margin: 0px; padding: 10px 0px 0px 0px;"/></a>
+					<ul style="list-style: none; margin: 0; padding: 6px 0px 0px 0px;">
+					<li><b>eikaiwa.fm ストアー:</b>
+						<ul style="list-style-type: disc; margin: 0; padding: 0px 0px 0px 16px;">
+							<li>１フル 英会話レッスン　たったの<font style="color: #8C1414;">￥99！</font></li>
+							<li>iPod にダウンロードできます</li>
+							<li>CD並のハイクォリティな音質</li>
+							<li>フル英会話レッスンが聴けます（４〜６分間）</li>
+							<li>NO コマーシャル！</li>
+							<li>ポータブル！　いつでもどこでも再生可能</li>
+							<li>何百ものレッスンから選べます</li>
+						</ul>
+					</li>
+				</ul>
+					<p style="margin: 0px; padding: 6px 0px 0px 0px;">eikaiwa.fm RADIO より良い音質で、 さらに、フルレングスの英会話レッスンを聴きたい方、そして時間や場所を選ばずiPod・MP３プレイヤーで聴きたい方、CM無しで聴きたい方、そんな方には eikaiwa.fmストアーがお勧めです。eikaiwa.fm ストアーではあなたの好きなレッスンが購入可能です。</p>
+					<p style="margin: 0px; padding: 6px 0px 6px 0px;">iPod・MP３プレイヤーをお持ちでない方もあなたのパソコンにダウンロードすることでフル英会話レッスンをお楽しみいただけます。</p>
+				</div>
+				<div style="width: 290px; height: 14px; padding: 0px; background-image: url(../img/cbox-bottom-2.gif); background-repeat: no-repeat;"></div>
+			</td>
+		</tr>
+		</table>

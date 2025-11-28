@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" version="2.0">
+	<channel>
+
+		<title>英会話勉強キャスト - eikaiwa.fm</title>
+		<link>http://www.eikaiwa.fm</link>
+		<description>eikaiwa.fmラジオの無料英語学習放送とダウンロードストアからの見本です。</description>
+		<language>ja</language>
+		<managingEditor>dave@eikaiwa.com</managingEditor>
+		<webMaster>junichi@eikaiwa.com</webMaster>
+		<pubDate>Wed, 29 Nov 2006 2:14:29 -0500</pubDate>
+		<lastBuildDate>Wed, 29 Nov 2006 2:14:29 -0500</lastBuildDate>
+		<itunes:author>eikaiwa.fm (http://www.eikaiwa.fm)</itunes:author>
+		<itunes:subtitle>eikaiwa.fmからの英会話ポッドキャスト。Enjoy!</itunes:subtitle>
+		<itunes:summary>eikaiwa.fmラジオの無料英語学習放送とダウンロードストアからの見本です。</itunes:summary>
+		<itunes:owner>
+			<itunes:name>Junichi Hasebe</itunes:name>
+			<itunes:email>junichi@eikaiwa.com</itunes:email>
+		</itunes:owner>
+		<itunes:image rel="image" href="http://eikaiwa.fm/img/eikiawaPodcast.gif">英会話勉強キャスト - eikaiwa.fm</itunes:image>
+		<itunes:category text="Education"/>
+		<itunes:category text="International">
+			<itunes:category text="Japanese"/>
+		</itunes:category>
+
+		<item>
+		<title>eikaiwa.fm bi-weekly podcast</title>
+		<link>http://eikaiwa.fm/audio/podcast/eikaiwa.fm2004-16-06.m4a</link>
+		<description>eikaiwa.fm bi-weekly podcast</description>
+		<enclosure url="http://eikaiwa.fm/audio/podcast/eikaiwa.fm2004-16-06.m4a" length="2818431" type="audio/mpeg"/>
+		<category>Podcasts</category>
+		<pubDate>Mon, 17 Apr 2006 0:57:38 -0400</pubDate>
+		<guid>http://eikaiwa.fm/audio/podcast/0_eikaiwa.fm2004-16-06.m4a</guid>
+		<itunes:author>reid</itunes:author>
+		<itunes:category text="Education"/>
+		<itunes:category text="International">
+			<itunes:category text="Japanese"/>
+		</itunes:category>
+		<itunes:duration>6:58</itunes:duration>
+		</item>
+
+		<item>
+		<title>英会話勉強キャスト - 6月</title>
+		<link>http://eikaiwa.fm/audio/podcast/eikaiwa.fm_2006-06-02.m4a</link>
+		<description>ビジネスの名詞 (1), 日常会話マスター (1), 魚類 (1)</description>
+		<enclosure url="http://eikaiwa.fm/audio/podcast/eikaiwa.fm_2006-06-02.m4a" length="2813202" type="audio/mpeg"/>
+		<category>Podcasts</category>
+		<pubDate>Fri, 02 Jun 2006 4:05:29 -0400</pubDate>
+		<guid>http://eikaiwa.fm/audio/podcast/1_eikaiwa.fm_2006-06-02.m4a</guid>
+		<itunes:author>eikaiwa.fm</itunes:author>
+		<itunes:category text="Education"/>
+		<itunes:category text="International">
+			<itunes:category text="Japanese"/>
+		</itunes:category>
+		<itunes:subtitle>ビジネスの名詞 (1), 日常会話マスター (1), 魚類 (1)</itunes:subtitle>
+		<itunes:summary>ビジネスの名詞 (1), 日常会話マスター (1), 魚類 (1)
+
+Please visit:
+
+http://www.eikaiwa.fm
+http://store.eikaiwa.fm
+
+よろしく！</itunes:summary>
+		<itunes:duration>00:07:53</itunes:duration>
+		<itunes:keywords>英語,英会話,勉強,英語の勉強</itunes:keywords>
+		</item>
+
+		<item>
+		<title>英会話勉強キャスト - 7月</title>
+		<link>http://eikaiwa.fm/audio/podcast/eikaiwa.fm_JULY_2006.m4a</link>
+		<description>日頃会話マスター(2), ビジネスの動詞(2), 鳥類(1)</description>
+		<enclosure url="http://eikaiwa.fm/audio/podcast/eikaiwa.fm_JULY_2006.m4a" length="2890981" type="audio/mpeg"/>
+		<category>Podcasts</category>
+		<pubDate>Thu, 20 Jul 2006 2:50:09 -0400</pubDate>
+		<guid>http://eikaiwa.fm/audio/podcast/2_eikaiwa.fm_JULY_2006.m4a</guid>
+		<itunes:author>eikaiwa.fm</itunes:author>
+		<itunes:category text="Education"/>
+		<itunes:category text="International">
+			<itunes:category text="Japanese"/>
+		</itunes:category>
+		<itunes:subtitle>日頃会話マスター(2), ビジネスの動詞(2), 鳥類(1)</itunes:subtitle>
+		<itunes:summary>日頃会話マスター(2), ビジネスの動詞(2), 鳥類(1)
+
+Please visit:
+
+http://www.eikaiwa.fm
+http://store.eikaiwa.fm</itunes:summary>
+		<itunes:duration>00:08:03</itunes:duration>
+		<itunes:keywords>英会話,英語,学習,勉強,eikaiwa</itunes:keywords>
+		</item>
+
+		<item>
+		<title>英会話勉強キャスト - 8月</title>
+		<link>http://eikaiwa.fm/audio/podcast/eikaiwa.fm_AUGUST_2006.m4a</link>
+		<description>日常会話マスター (3), ビジネスの名詞 (3), 動物の鳴き声</description>
+		<enclosure url="http://eikaiwa.fm/audio/podcast/eikaiwa.fm_AUGUST_2006.m4a" length="1373722" type="audio/mpeg"/>
+		<category>Podcasts</category>
+		<pubDate>Tue, 22 Aug 2006 7:35:46 -0400</pubDate>
+		<guid>http://eikaiwa.fm/audio/podcast/3_eikaiwa.fm_AUGUST_2006.m4a</guid>
+		<itunes:author>eikaiwa.fm</itunes:author>
+		<itunes:category text="Education"/>
+		<itunes:category text="International">
+			<itunes:category text="Japanese"/>
+		</itunes:category>
+		<itunes:subtitle>日常会話マスター (3), ビジネスの名詞 (3), 動物の鳴き声</itunes:subtitle>
+		<itunes:summary>日常会話マスター (3), ビジネスの名詞 (3), 動物の鳴き声
+
+Please visit:
+
+http://www.eikaiwa.fm
+http://store.eikaiwa.fm</itunes:summary>
+		<itunes:duration>0:07:44</itunes:duration>
+		<itunes:keywords>英会話 英語 学習 english</itunes:keywords>
+		</item>
+
+		<item>
+		<title>英会話勉強キャスト - 9月</title>
+		<link>http://eikaiwa.fm/audio/podcast/eikaiwa.fm_2006-09-20.m4a</link>
+		<description>日常会話マスター (4), ビジネスの名詞 (4), パン屋で</description>
+		<enclosure url="http://eikaiwa.fm/audio/podcast/eikaiwa.fm_2006-09-20.m4a" length="2885311" type="audio/mpeg"/>
+		<category>Podcasts</category>
+		<pubDate>Wed, 20 Sep 2006 3:00:09 -0400</pubDate>
+		<guid>http://eikaiwa.fm/audio/podcast/4_eikaiwa.fm_2006-09-20.m4a</guid>
+		<itunes:author>eikaiwa.fm, Ltd.</itunes:author>
+		<itunes:category text="Education"/>
+		<itunes:category text="International">
+			<itunes:category text="Japanese"/>
+		</itunes:category>
+		<itunes:subtitle>日常会話マスター (4), ビジネスの名詞 (4)パン屋で</itunes:subtitle>
+		<itunes:summary>今月のeikaiwa.fmの勉強キャストは日常会話マスター (4), ビジネスの名詞 (4)パン屋で
+
+http://www.eikaiwa.fm
+http://store.eikaiwa.fm</itunes:summary>
+		<itunes:duration>00:07:25</itunes:duration>
+		<itunes:keywords>英会話,英語,勉強,eikaiwa</itunes:keywords>
+		</item>
+
+		<item>
+		<title>英会話勉強キャスト - 10月</title>
+		<link>http://eikaiwa.fm/audio/podcast/eikaiwa.fm_OCTOBER_2006.m4a</link>
+		<description>日常会話マスタ (5) ビジネスの名詞 (5) 体の特徴</description>
+		<enclosure url="http://eikaiwa.fm/audio/podcast/eikaiwa.fm_OCTOBER_2006.m4a" length="2841368" type="audio/mpeg"/>
+		<category>Podcasts</category>
+		<pubDate>Thu, 26 Oct 2006 9:06:45 -0400</pubDate>
+		<guid>http://eikaiwa.fm/audio/podcast/5_eikaiwa.fm_OCTOBER_2006.m4a</guid>
+		<itunes:author>eikaiwa.fm</itunes:author>
+		<itunes:category text="Education"/>
+		<itunes:category text="International">
+			<itunes:category text="Japanese"/>
+		</itunes:category>
+		<itunes:subtitle>日常会話マスタ (5) ビジネスの名詞 (5) 体の特徴</itunes:subtitle>
+		<itunes:summary>1. 日常会話マスタ (5)
+2. ビジネスの名詞 (5) 
+3. 体の特徴
+
+Please visit:
+http://www.eikaiwa.fm
+http://store.eikaiwa.fm</itunes:summary>
+		<itunes:duration>00:07:46</itunes:duration>
+		<itunes:keywords>英会話　英語　勉強　語学</itunes:keywords>
+		</item>
+
+		<item>
+		<title>英会話勉強キャスト - 11月</title>
+		<link>http://eikaiwa.fm/audio/podcast/eikaiwa.fm_NOVEMBER_2006.m4a</link>
+		<description>歯医者さんで (2), ビジネスの名詞 (6), 本 (1)</description>
+		<enclosure url="http://eikaiwa.fm/audio/podcast/eikaiwa.fm_NOVEMBER_2006.m4a" length="3031803" type="audio/mpeg"/>
+		<category>Podcasts</category>
+		<pubDate>Wed, 29 Nov 2006 2:14:29 -0500</pubDate>
+		<guid>http://eikaiwa.fm/audio/podcast/6_eikaiwa.fm_NOVEMBER_2006.m4a</guid>
+		<itunes:author>eikaiwa.fm (http://www.eikaiwa.fm)</itunes:author>
+		<itunes:category text="Education"/>
+		<itunes:category text="International">
+			<itunes:category text="Japanese"/>
+		</itunes:category>
+		<itunes:subtitle>歯医者さんで (2), ビジネスの名詞 (6), 本 (1)</itunes:subtitle>
+		<itunes:summary>Please visit:
+
+http://www.eikaiwa.fm
+http://store.eikaiwa.fm</itunes:summary>
+		<itunes:duration>00:07:49</itunes:duration>
+		<itunes:keywords>英会話 英語 english 勉強 国語　</itunes:keywords>
+		</item>
+
+	</channel>
+</rss>

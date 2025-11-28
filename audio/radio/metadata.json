@@ -1,0 +1,26 @@
+{
+  "tracks": [
+    {
+      "filename": "sample001.mp3",
+      "title": "Sample Lesson 1",
+      "artist": "Eikaiwa.fm",
+      "duration": 120
+    },
+    {
+      "filename": "sample002.mp3",
+      "title": "Sample Lesson 2",
+      "artist": "Eikaiwa.fm",
+      "duration": 150
+    }
+  ],
+  "info": {
+    "description": "Replace the sample tracks above with your actual MP3 files. Each track should have:",
+    "fields": {
+      "filename": "The MP3 filename in the tracks/ directory",
+      "title": "Display title for 'Now Playing'",
+      "artist": "Artist name (e.g., 'Eikaiwa.fm')",
+      "duration": "Track length in seconds (optional)"
+    },
+    "instructions": "Add all 100-200 tracks to the 'tracks' array following the same format."
+  }
+}

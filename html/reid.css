@@ -1,0 +1,164 @@
+html, body
+{
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: gray;
+	color: #ffffff
+	height: 100%;
+	color: white;
+}
+
+a
+{
+	color: #0022bb;
+}
+
+a:active
+{
+	color: #ee0000;
+}
+
+
+a:visited
+{
+	color: #555555;
+}
+
+header
+{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+h1
+{
+	font-size: 32px;
+}
+
+h2
+{
+	font-size: 24px;
+}
+
+#wrapper 
+{
+	height: auto !important; /* ie6 ignores !important, so this will be overridden below */
+	min-height: 100%; /* ie6 ignores min-height completely */
+	height: 100%;
+	background-color: #083688;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.row
+{
+	margin-bottom: 20px;
+}
+
+.section
+{
+	float: left;
+	width: 430px;
+	margin-right: 10px;
+	margin-left: 10px;
+	background-color: white;
+	color: #083688;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+.wide
+{
+	width: 900px;
+}
+
+.column1
+{
+	float: left;
+	width: 110px;
+	margin-right: 6px;
+}
+
+.deluxe
+{
+	padding-top: 20px;
+}
+
+.column2
+{
+	float: left;
+	width: 610px;
+	margin-right: 6px;
+}
+
+.column2 h2
+{
+	text-align: center;
+}
+.column2 p
+{
+	width: 600px;
+	padding-left: 20px;
+}
+
+.column2-small
+{
+	float: left;
+	width: 496px;
+	margin-right: 6px;
+}
+
+.column2-small h2
+{
+	text-align: center;
+}
+
+.column2-small p
+{
+	width: 400px;
+	padding-left: 20px;
+}
+
+.column2-wide
+{
+	float: left;
+	width: 760px;
+	margin-right: 6px;
+}
+
+.column2-wide h2
+{
+	text-align: center;
+}
+
+.bottom-left
+{
+	float: left;
+	width: 300px;
+	padding-top: 20px;
+	padding-left: 70px;
+}
+
+.bottom-right
+{
+	padding-top: 20px;
+	text-align: right;
+	padding-right: 40px;
+}
+
+.column3
+{
+	float: left;
+	width: 282px;
+	text-align: center;
+}
+
+.column3 img
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: auto;
+	padding-right: auto;
+}

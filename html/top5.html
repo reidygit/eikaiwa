@@ -1,0 +1,27 @@
+﻿<table cellspacing="0" style="<? print $margin; ?> padding: 0px; width: 276px; font-family: arial, helvetica, sans-serif; font-size: 12px; border: 1px solid #C6C47B">
+
+<? 
+$count = 1; 
+foreach ($results as $track) 
+{
+	if (strlen($track->name) > 38)
+	{
+		$name = substr($track->name, 0, 38) . "...";
+	}
+		else
+		{
+			$name = $track->name;
+		}
+	
+	$highlight = ( $count & 1 ) ? " background: #F5F2D5;" : " background: #fff;";
+?>
+
+<tr>
+	<td style="margin: 0px; padding: 0px 2px 0px 4px; text-align: left;<? print $highlight; ?>"><? print $count; ?>.&nbsp;<a href="<? print STORE_URL; ?>?action=detail&tid=<? print $track->track_id; ?>" target="new"><? print $name; ?></a></td>
+	<td style="margin: 0px; text-align: left;<? print $highlight; ?>">¥99</td>
+	<td style="margin: 0px; text-align: left;<? print $highlight; ?>"><a href="<? print STORE_URL; ?>?action=detail&tid=<? print $track->track_id; ?>" target="new"><img src="../img/buy.gif" border="0" alt="" align="bottom" style="margin: 0px; padding: 0px;"/></a></td>
+</tr>
+
+<? $count++; } ?>
+
+</table>

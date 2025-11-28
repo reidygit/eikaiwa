@@ -1,0 +1,62 @@
+
+<?php
+
+if (isset($_POST["email"]))
+{
+	$email = $_POST["email"];
+}
+	elseif (isset($_GET["email"]))
+	{
+		$email = $_GET["email"];
+	}
+?>
+
+<table cellspacing="0" cellpadding="0">
+<tr>
+	<td style="padding-top: 6px; font-family: arial; font-size: 11px;"><?php $page->entries($email, $column, $order, $year, $month, $day, $year_end, $month_end, $day_end, "edituser"); ?></td>
+	<td><?php $page->pages($email, $entries, $column, $order, $total, $year, $month, $day, $year_end, $month_end, $day_end, "edituser"); ?></td>
+</tr>
+<tr>
+	<td colspan="2">
+		<table cellspacing="0" cellpadding="0" style="padding: 1px; font-family: arial, helvetica, sans-serif; font-size: 12px; border-style: solid; border-color: #8C1414; border-width: 1px;">
+		<tr>
+			<td style="padding: 2px 8px 2px 8px; border-bottom-style: solid; border-bottom-color: #8C1414; border-bottom-width: 1px; font-weight: bold;">date <a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=date&order=DESC"><img src="../img/sort_down.gif" border="0" alt="" style="padding-bottom: 1px;"></a>&nbsp;<a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=date&order=ASC"><img src="../img/sort_up.gif" border="0" alt="" style="padding-bottom: 1px;"></a></td>
+			<td style="padding: 2px 8px 2px 8px; border-bottom-style: solid; border-bottom-color: #8C1414; border-bottom-width: 1px; font-weight: bold;">email <a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=email&order=DESC"><img src="../img/sort_down.gif" border="0" alt="" style="padding-bottom: 1px;"></a>&nbsp;<a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=email&order=ASC"><img src="../img/sort_up.gif" border="0" alt="" style="padding-bottom: 1px;"></a></td>
+			<td style="padding: 2px 8px 2px 8px; border-bottom-style: solid; border-bottom-color: #8C1414; border-bottom-width: 1px; font-weight: bold;">first name <a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=first_name&order=DESC"><img src="../img/sort_down.gif" border="0" alt="" style="padding-bottom: 1px;"></a>&nbsp;<a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=first_name&order=ASC"><img src="../img/sort_up.gif" border="0" alt="" style="padding-bottom: 1px;"></a></td>
+			<td style="padding: 2px 8px 2px 8px; border-bottom-style: solid; border-bottom-color: #8C1414; border-bottom-width: 1px; font-weight: bold;">last name <a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=last_name&order=DESC"><img src="../img/sort_down.gif" border="0" alt="" style="padding-bottom: 1px;"></a>&nbsp;<a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=last_name&order=ASC"><img src="../img/sort_up.gif" border="0" alt="" style="padding-bottom: 1px;"></a></td>
+			<td style="padding: 2px 8px 2px 8px; border-bottom-style: solid; border-bottom-color: #8C1414; border-bottom-width: 1px; font-weight: bold;">e updates <a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=e_updates&order=DESC"><img src="../img/sort_down.gif" border="0" alt="" style="padding-bottom: 1px;"></a>&nbsp;<a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=e_updates&order=ASC"><img src="../img/sort_up.gif" border="0" alt="" style="padding-bottom: 1px;"></a></td>
+			<td style="padding: 2px 8px 2px 8px; border-bottom-style: solid; border-bottom-color: #8C1414; border-bottom-width: 1px; font-weight: bold;">region <a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=region&order=DESC"><img src="../img/sort_down.gif" border="0" alt="" style="padding-bottom: 1px;"></a>&nbsp;<a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=region&order=ASC"><img src="../img/sort_up.gif" border="0" alt="" style="padding-bottom: 1px;"></a></td>
+			<td style="padding: 2px 8px 2px 8px; border-bottom-style: solid; border-bottom-color: #8C1414; border-bottom-width: 1px; font-weight: bold;">status <a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=status&order=DESC"><img src="../img/sort_down.gif" border="0" alt="" style="padding-bottom: 1px;"></a>&nbsp;<a href="?edituser&email=<? print $email; ?>&year=<? print $year; ?>&month=<? print $month; ?>&day=<? print $day; ?>&year_end=<? print $year_end; ?>&month_end=<? print $month_end; ?>&day_end=<? print $day_end; ?>&entries=<?php print $entries; ?>&column=status&order=ASC"><img src="../img/sort_up.gif" border="0" alt="" style="padding-bottom: 1px;"></a></td>
+		</tr>
+		<?php
+		$count = 0;
+		foreach($user as $value)
+		{
+			$class = ( $count & 1 ) ? 'padding: 2px 8px 2px 8px; background: #ccc;' : 'padding: 2px 8px 2px 8px;';
+			print "<tr>";
+				print "<td style=\"$class\"v> $value->date </td>";
+				print "<td style=\"$class\"> <a href=\"?edituser&email=$value->email\" class=\"user_link\">$value->email</a> </td>";
+				print "<td style=\"$class\"v> $value->first_name </td>";
+				print "<td style=\"$class\"> $value->last_name </td>";
+				if ($value->e_updates == 1)
+				{
+					print "<td style=\"$class\"> yes </td>";
+				}
+					elseif ($value->e_updates == 0)
+					{
+						print "<td style=\"$class\"> no </td>";
+					}
+				print "<td style=\"$class\"> $value->region </td>";
+				print "<td style=\"$class\"> <font style=\"color: #E88A2C; font-weight: bold;\">$value->status</font> </td>";
+			print "</tr>";
+			
+			$count++;
+		}
+		?>
+		</table>
+	</td>
+</tr>
+</table>
+
+
+

@@ -1,0 +1,15 @@
+input.login_email {width: 105px; font-size: 11px;}
+input.login_password {width: 105px; height: 14px; font-size: 11px;}
+input.submit {margin: 0px; padding: 1px; font-size: 11px;}
+
+input.eupdates_email {width: 142px; font-size: 11px;}
+select.eupdates_region {margin-right: 0px; width: 142px; font-size: 11px;}
+
+td.login_b_remeber {padding: 4px 0px 0px 0px;}
+td.login_b_submit {padding: 4px 0px 0px 0px; text-align: right;}
+
+td.eupdates_a_two {padding: 0px;}
+td.eupdates_a_region {padding: 0px; text-align: right;}
+
+td.eupdates_a_submit {padding: 2px 0px 0px 0px; text-align: right;}
+td.eupdates_a_three {padding: 3px 0px 0px 0px;}

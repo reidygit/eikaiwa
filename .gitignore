@@ -1,0 +1,52 @@
+# Audio files (too large for Git)
+/audio/radio/tracks/*.mp3
+/audio/free/*.mp3
+/audio/podcast/*.m4a
+/audio/samples/**/*.mp3
+
+# Large vendor directories (don't need version control)
+/store/
+/store-CubeCart-6.0.12/
+
+# PHP binaries (server-specific, too large)
+/cgi-bin/
+
+# Sensitive configuration files
+/php/ez_sql.php
+.passwd
+.htpasswd
+
+# Server-specific files
+.DS_Store
+.htaccess
+*~
+*.swp
+*.swo
+
+# CubeCart cache and temporary files
+/store/cache/*
+/store/backup/*
+/store/images/uploads/*
+/store/files/*
+
+# Admin logs
+/admin/pp_ipn.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# PHP temporary files
+*.log
+error_log
+
+# Claude and AI tool settings (local only)
+.claude/
+.grok/
+
+# Temporary files
+tmp/
+temp/
+*.tmp

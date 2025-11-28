@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>password assistant</title>
+	<meta name="generator" content="BBEdit 8.2" />
+	
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	
+	function validate()
+	{
+		if (document.chpwd.old_pwd.value == null || document.chpwd.old_pwd.value.length == 0)
+		{
+			alert("please fill in your old password");
+			document.chpwd.old_pwd.focus()
+			return false;
+		}
+		
+		if (document.chpwd.new_pwd.value == null || document.chpwd.new_pwd.value.length == 0)
+		{
+			alert("please fill in a new password");
+			document.chpwd.new_pwd.focus()
+			return false;
+		}
+		
+		if (document.chpwd.check.value == null || document.chpwd.check.value.length == 0)
+		{
+			alert("please check that you filled in your new password twice");
+			document.chpwd.check.focus()
+			return false;
+		}
+		
+		if (document.chpwd.check.value != document.chpwd.new_pwd.value)
+		{
+			alert("the new passwords you enter do not match");
+			document.chpwd.new_pwd.focus()
+			return false;
+		}
+		
+		if (document.chpwd.new_pwd.value.length < 7)
+		{
+			alert("your new password is too short. your new password must be 7 charachters or longer");
+			document.chpwd.new_pwd.focus()
+			return false;
+		}
+	}
+	// -->
+	</script>
+	
+</head>
+
+<body>
+
+<form name="chpwd" id="chpwd" method="post" onsubmit="return validate();">
+old password: <input type="password" name="old_pwd" id="old_pwd"/><br/>
+new password: <input type="password" name="new_pwd" id="new_pwd"/><br/>
+re-enter new password: <input type="password" name="check" id="check"/><br/>
+<input type="submit" value="change"/>
+</form>
+
+</body>
+</html>

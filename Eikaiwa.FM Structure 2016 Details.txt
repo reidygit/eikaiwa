@@ -1,0 +1,11 @@
+2 separate websites with 2 separate streaming channels and 2 separate audio download stores.
+
+http://nihongo.fm   &  http://eikaiwa.fm
+
+iCastCenter - http://icastcenter.com took over where live365 went bankrupt
+
+Centova Cast  - software used by iCast 
+
+CubeCart - free open source shopping cart software
+
+Original design in 2004 by Ryoko Hoffman

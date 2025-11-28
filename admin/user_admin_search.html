@@ -1,0 +1,165 @@
+
+<?php
+	if (isset($_GET["finduser"]))
+	{
+		$action = "?edituser";
+	}
+?>
+
+<form name="user_search" id="user_search" method="post" action="<?php print $action; ?>">
+
+<table border="0" cellspacing="0" cellpadding="0" style="padding: 6px; font-family: arial, helvetica, sans-serif; font-size: 11px; border-style: solid; border-color: #8C1414; border-width: 1px;">
+	<tr>
+		<td>E-mail:</td>
+		<td style="width: 10px;"></td>
+		<td colspan="5"><input size="27" type="text" name="email"/></td>
+	</tr>
+	<tr>
+		<td colspan="7" style="padding: 4px; text-align: center;">AND ~ OR</td>
+	</tr>
+	<tr>
+		<td>From:</td>
+		<td style="width: 10px;"></td>
+		<td>
+		<select name="year" style="margin-right: 4px; font-size: 11px;">
+			<option value="" >Year</option>
+			<option value="2005" <? if ($year == "2005"){ print "selected=\"selected\""; } ?>>2005</option>
+			<option value="2006" <? if ($year == "2006"){ print "selected=\"selected\""; } ?>>2006</option>
+			<option value="2007" <? if ($year == "2007"){ print "selected=\"selected\""; } ?>>2007</option>
+			<option value="2008" <? if ($year == "2008"){ print "selected=\"selected\""; } ?>>2008</option>
+			<option value="2009" <? if ($year == "2009"){ print "selected=\"selected\""; } ?>>2009</option>
+			<option value="2010" <? if ($year == "2010"){ print "selected=\"selected\""; } ?>>2010</option>
+		</select>
+		</td>
+		<td style="width: 5px;"></td>
+		<td>
+		<select name="month" style="margin-right: 4px; font-size: 11px;">
+			<option value="" >Month</option>
+			<option value="01" <? if ($month == "01"){ print "selected=\"selected\""; } ?>>Jan</option>
+			<option value="02" <? if ($month == "02"){ print "selected=\"selected\""; } ?>>Feb</option>
+			<option value="03" <? if ($month == "03"){ print "selected=\"selected\""; } ?>>Mar</option>
+			<option value="04" <? if ($month == "04"){ print "selected=\"selected\""; } ?>>Apr</option>
+			<option value="05" <? if ($month == "05"){ print "selected=\"selected\""; } ?>>May</option>
+			<option value="06" <? if ($month == "06"){ print "selected=\"selected\""; } ?>>Jun</option>
+			<option value="07" <? if ($month == "07"){ print "selected=\"selected\""; } ?>>Jul</option>
+			<option value="08" <? if ($month == "08"){ print "selected=\"selected\""; } ?>>Aug</option>
+			<option value="09" <? if ($month == "09"){ print "selected=\"selected\""; } ?>>Sep</option>
+			<option value="10" <? if ($month == "10"){ print "selected=\"selected\""; } ?>>Oct</option>
+			<option value="11" <? if ($month == "11"){ print "selected=\"selected\""; } ?>>Nov</option>
+			<option value="12" <? if ($month == "12"){ print "selected=\"selected\""; } ?>>Dec</option>
+		</select>
+		</td>
+		<td style="width: 5px;"></td>
+		<td>
+		<select name="day" style="margin-right: 4px; font-size: 11px;">
+			<option value="" >Day</option>
+			<option value="01" <? if ($day == "01"){ print "selected=\"selected\""; } ?>>1</option>
+			<option value="02" <? if ($day == "02"){ print "selected=\"selected\""; } ?>>2</option>
+			<option value="03" <? if ($day == "03"){ print "selected=\"selected\""; } ?>>3</option>
+			<option value="04" <? if ($day == "04"){ print "selected=\"selected\""; } ?>>4</option>
+			<option value="05" <? if ($day == "05"){ print "selected=\"selected\""; } ?>>5</option>
+			<option value="06" <? if ($day == "06"){ print "selected=\"selected\""; } ?>>6</option>
+			<option value="07" <? if ($day == "07"){ print "selected=\"selected\""; } ?>>7</option>
+			<option value="08" <? if ($day == "08"){ print "selected=\"selected\""; } ?>>8</option>
+			<option value="09" <? if ($day == "09"){ print "selected=\"selected\""; } ?>>9</option>
+			<option value="10" <? if ($day == "10"){ print "selected=\"selected\""; } ?>>10</option>
+			<option value="11" <? if ($day == "11"){ print "selected=\"selected\""; } ?>>11</option>
+			<option value="12" <? if ($day == "12"){ print "selected=\"selected\""; } ?>>12</option>
+			<option value="13" <? if ($day == "13"){ print "selected=\"selected\""; } ?>>13</option>
+			<option value="14" <? if ($day == "14"){ print "selected=\"selected\""; } ?>>14</option>
+			<option value="15" <? if ($day == "15"){ print "selected=\"selected\""; } ?>>15</option>
+			<option value="16" <? if ($day == "16"){ print "selected=\"selected\""; } ?>>16</option>
+			<option value="17" <? if ($day == "17"){ print "selected=\"selected\""; } ?>>17</option>
+			<option value="18" <? if ($day == "18"){ print "selected=\"selected\""; } ?>>18</option>
+			<option value="19" <? if ($day == "19"){ print "selected=\"selected\""; } ?>>19</option>
+			<option value="20" <? if ($day == "20"){ print "selected=\"selected\""; } ?>>20</option>
+			<option value="21" <? if ($day == "21"){ print "selected=\"selected\""; } ?>>21</option>
+			<option value="22" <? if ($day == "22"){ print "selected=\"selected\""; } ?>>22</option>
+			<option value="23" <? if ($day == "23"){ print "selected=\"selected\""; } ?>>23</option>
+			<option value="24" <? if ($day == "24"){ print "selected=\"selected\""; } ?>>24</option>
+			<option value="25" <? if ($day == "25"){ print "selected=\"selected\""; } ?>>25</option>
+			<option value="26" <? if ($day == "26"){ print "selected=\"selected\""; } ?>>26</option>
+			<option value="27" <? if ($day == "27"){ print "selected=\"selected\""; } ?>>27</option>
+			<option value="28" <? if ($day == "28"){ print "selected=\"selected\""; } ?>>28</option>
+			<option value="29" <? if ($day == "29"){ print "selected=\"selected\""; } ?>>29</option>
+			<option value="30" <? if ($day == "30"){ print "selected=\"selected\""; } ?>>30</option>
+			<option value="31" <? if ($day == "31"){ print "selected=\"selected\""; } ?>>31</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td>To:</td>
+		<td style="width: 10px;"></td>
+		<td>
+		<select name="year_end" style="margin-right: 4px; font-size: 11px;">
+			<option value="" >Year</option>
+			<option value="2005" <? if ($year_end == "2005"){ print "selected=\"selected\""; } ?>>2005</option>
+			<option value="2006" <? if ($year_end == "2006"){ print "selected=\"selected\""; } ?>>2006</option>
+			<option value="2007" <? if ($year_end == "2007"){ print "selected=\"selected\""; } ?>>2007</option>
+			<option value="2008" <? if ($year_end == "2008"){ print "selected=\"selected\""; } ?>>2008</option>
+			<option value="2009" <? if ($year_end == "2009"){ print "selected=\"selected\""; } ?>>2009</option>
+			<option value="2010" <? if ($year_end == "2010"){ print "selected=\"selected\""; } ?>>2010</option>
+		</select>
+		</td>
+		<td style="width: 5px;"></td>
+		<td>
+		<select name="month_end" style="margin-right: 4px; font-size: 11px;">
+			<option value="" >Month</option>
+			<option value="01" <? if ($month_end == "01"){ print "selected=\"selected\""; } ?>>Jan</option>
+			<option value="02" <? if ($month_end == "02"){ print "selected=\"selected\""; } ?>>Feb</option>
+			<option value="03" <? if ($month_end == "03"){ print "selected=\"selected\""; } ?>>Mar</option>
+			<option value="04" <? if ($month_end == "04"){ print "selected=\"selected\""; } ?>>Apr</option>
+			<option value="05" <? if ($month_end == "05"){ print "selected=\"selected\""; } ?>>May</option>
+			<option value="06" <? if ($month_end == "06"){ print "selected=\"selected\""; } ?>>Jun</option>
+			<option value="07" <? if ($month_end == "07"){ print "selected=\"selected\""; } ?>>Jul</option>
+			<option value="08" <? if ($month_end == "08"){ print "selected=\"selected\""; } ?>>Aug</option>
+			<option value="09" <? if ($month_end == "09"){ print "selected=\"selected\""; } ?>>Sep</option>
+			<option value="10" <? if ($month_end == "10"){ print "selected=\"selected\""; } ?>>Oct</option>
+			<option value="11" <? if ($month_end == "11"){ print "selected=\"selected\""; } ?>>Nov</option>
+			<option value="12" <? if ($month_end == "12"){ print "selected=\"selected\""; } ?>>Dec</option>
+		</select>
+		</td>
+		<td style="width: 5px;"></td>
+		<td>
+		<select name="day_end" style="margin-right: 4px; font-size: 11px;">
+			<option value="" >Day</option>
+			<option value="01" <? if ($day_end == "01"){ print "selected=\"selected\""; } ?>>1</option>
+			<option value="02" <? if ($day_end == "02"){ print "selected=\"selected\""; } ?>>2</option>
+			<option value="03" <? if ($day_end == "03"){ print "selected=\"selected\""; } ?>>3</option>
+			<option value="04" <? if ($day_end == "04"){ print "selected=\"selected\""; } ?>>4</option>
+			<option value="05" <? if ($day_end == "05"){ print "selected=\"selected\""; } ?>>5</option>
+			<option value="06" <? if ($day_end == "06"){ print "selected=\"selected\""; } ?>>6</option>
+			<option value="07" <? if ($day_end == "07"){ print "selected=\"selected\""; } ?>>7</option>
+			<option value="08" <? if ($day_end == "08"){ print "selected=\"selected\""; } ?>>8</option>
+			<option value="09" <? if ($day_end == "09"){ print "selected=\"selected\""; } ?>>9</option>
+			<option value="10" <? if ($day_end == "10"){ print "selected=\"selected\""; } ?>>10</option>
+			<option value="11" <? if ($day_end == "11"){ print "selected=\"selected\""; } ?>>11</option>
+			<option value="12" <? if ($day_end == "12"){ print "selected=\"selected\""; } ?>>12</option>
+			<option value="13" <? if ($day_end == "13"){ print "selected=\"selected\""; } ?>>13</option>
+			<option value="14" <? if ($day_end == "14"){ print "selected=\"selected\""; } ?>>14</option>
+			<option value="15" <? if ($day_end == "15"){ print "selected=\"selected\""; } ?>>15</option>
+			<option value="16" <? if ($day_end == "16"){ print "selected=\"selected\""; } ?>>16</option>
+			<option value="17" <? if ($day_end == "17"){ print "selected=\"selected\""; } ?>>17</option>
+			<option value="18" <? if ($day_end == "18"){ print "selected=\"selected\""; } ?>>18</option>
+			<option value="19" <? if ($day_end == "19"){ print "selected=\"selected\""; } ?>>19</option>
+			<option value="20" <? if ($day_end == "20"){ print "selected=\"selected\""; } ?>>20</option>
+			<option value="21" <? if ($day_end == "21"){ print "selected=\"selected\""; } ?>>21</option>
+			<option value="22" <? if ($day_end == "22"){ print "selected=\"selected\""; } ?>>22</option>
+			<option value="23" <? if ($day_end == "23"){ print "selected=\"selected\""; } ?>>23</option>
+			<option value="24" <? if ($day_end == "24"){ print "selected=\"selected\""; } ?>>24</option>
+			<option value="25" <? if ($day_end == "25"){ print "selected=\"selected\""; } ?>>25</option>
+			<option value="26" <? if ($day_end == "26"){ print "selected=\"selected\""; } ?>>26</option>
+			<option value="27" <? if ($day_end == "27"){ print "selected=\"selected\""; } ?>>27</option>
+			<option value="28" <? if ($day_end == "28"){ print "selected=\"selected\""; } ?>>28</option>
+			<option value="29" <? if ($day_end == "29"){ print "selected=\"selected\""; } ?>>29</option>
+			<option value="30" <? if ($day_end == "30"){ print "selected=\"selected\""; } ?>>30</option>
+			<option value="31" <? if ($day_end == "31"){ print "selected=\"selected\""; } ?>>31</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="7" style="padding-top: 4px; text-align: right;"><input type="submit" value="GO"/></td>
+	</tr>
+</table>
+
+</form

@@ -1,0 +1,1 @@
+<a href="https://www.senseinavi.com/pap.php?a_aid=4e8f4ae7&amp;a_bid=36e8a355" target=""><strong>SenseiNavi.com</strong><br/></a><img style="border:0" src="http://senseinavi.com/affiliates/scripts/imp.php?a_aid=4e8f4ae7&amp;a_bid=36e8a355" width="1" height="1" alt="" />

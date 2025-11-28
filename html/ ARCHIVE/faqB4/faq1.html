@@ -1,0 +1,302 @@
+﻿<?
+$browser = $_SERVER["HTTP_USER_AGENT"];
+if (strpos($browser, "Macintosh"))
+{
+	$faq_margin = "margin-top: 4px;";
+	$faq_padding = "padding-top: 2px;";
+}
+if (strpos($browser, "Windows"))
+{
+	$faq_margin = "margin-top: 3px;";
+	$faq_padding = "padding-top: 1px;";
+} 
+?>
+
+<a name="top"></a>
+<h1 style="margin: 10px 0px 10px 16px; padding: 0px; text-align: left; font: bold 16px arial; color: #8C1414;">よくある質問／ヘルプ</h1>
+
+<div style="margin-bottom: 14px; padding-left: 16px; text-align: left;">
+	<ul style="list-style-type: disc; margin: 0; padding: 0px 0px 0px 16px;">
+		<li><a href="#top"><b>eikaiwa.fm</b> RADIO</a></li>
+		<li><a href="#store"><b>eikaiwa.fm</b> ストアー</a></li>
+		<li><a href="#advertising"><b>eikaiwa.fm</b> に広告を出稿する</a></li>
+		<li><a href="#selling"><b>eikaiwa.fm</b>ストアー でオーディオ教材を販売する</a></li>
+		<li><a href="#misc">その他</a></li>
+	</ul>
+</div>
+
+<div style="width: 590px; text-align: left;">
+
+	<div style="width: 590px; height: 24px; text-align: left; font: bold 14px arial; color: #8C1414;  background-image: url(<? print IMG_DIR; ?>faq_header.gif); background-repeat: no-repeat;"><p style="margin:0px; padding: 4px 0px 0px 16px;">eikaiwa.fm Radio</p></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#top" onclick="toggleDisplay('answer0');">どうやって eikaiwa.fm RADIO を聴くのですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer0">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;"><b>eikaiwa.fm</b> のホーム（トップベージ）にある「無料ラジオ　オンエア中！」または「TUNE IN」ボタンをクリックして下さい。プレーヤーウインドウが現れ、直ちにラジオがスタートします。 <b>eikaiwa.fm</b> をお聴きになるためには、Quicktime をインストールする必要がございます。Quicktime の無料ダウンロードはこちらで：<br/><br/><a href="http://www.apple.com/quicktime/download/" target="new"><img src="<? print IMG_DIR; ?>qt7badge_getQTfreeDownload.gif" border="" alt="get quicktime" style="margin-bottom: 8px;"/></a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#top" onclick="toggleDisplay('answer0');">どうやって eikaiwa.fmで勉強したら良いのですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer0">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">とっても簡単です。「TUNE IN」をクリックして、オンエア放送を聴いて、実際に声に出して発音して下さい。　<b>eikaiwa.fm</b> RADIOは英語のリスニング・スピーキング・単語力を伸ばし、新しい表現を学ぶための全く新しいの勉強方法です。　教科書その他の教材はいっさい必要ありません。<b>eikaiwa.fm</b> RADIOで流れる英会話レッスンは、日本語とそれに対応する英語の単語、フレーズから成り立っています。まずポイントになる単語またはフレーズが日本語で読まれ、その後それに対応する英語が２回読まれます。各英単語もしくはフレーズの間には短い空白時間がありますので、その間に実際に口に出して発音し、正しい発音の勉強が出来るようになっています。</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#top" onclick="toggleDisplay('answer1');">時折、実際に流れているレッスンと、ウインドウに表示されているレッスン名が異なることがあります。これはなぜですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer1">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">英会話レッスンのオーディオが流れはじめてから、そのレッスン名がウインドウ上で Track Info として表示されるまでには少しの時差が生じます。現在流れているレッスンのタイトルを確かめたい場合は「リフレッシュ Track Info」をクリックして下さい。</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#top" onclick="toggleDisplay('answer2');">eikaiwa.fm RADIOは無料放送なのに、なぜ プレーヤーウインドウ上に金額が表示されているのですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer2">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">eikaiwa.fm RADIOは無料です。ここでストリーミング放送されているレッスンは原則的にサンプルレッスンです。つまり、<b>eikaiwa.fm</b>　ストアーでダウンロード販売されているフルレングスの英会話レッスンの一部が流れているわけです。ご試聴頂のサンプルレッスンを気に入って頂き、フルレングスの英会話レッスンを購入をお考え頂いた場合、プレーヤーウインドウ上の「カートに入れる」ボタンをクリックしてください。直ちに<b>eikaiwa.fm</b>　ストアーへとご案内します。こちらにて、改めてお買い物手続きをして頂くことになります。</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#top" onclick="toggleDisplay('answer3');">聴いている途中で急に音が止まってしまいました。なぜですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer3">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">それには、いくつかの理由が考えられます。ネットワーク上の障害、コンピューターの問題、サイトアップデートのための一時的配信の中断（通常リスナーの少ない時間帯に アップデートされます）などが考えられます。インターネットの接続を碓認した後、もう一度「TUNE IN」もしくは 「無料ラジオ　オンエア中！」をクリックしてみてください。</div>
+	</div>
+	
+	<div style="padding-top: 5px; clear: both;"></div>
+	
+	<div style="margin-top: 0px; width: 590px; height: 24px; text-align: left; font: bold 14px arial; color: #8C1414;  background-image: url(<? print IMG_DIR; ?>faq_header.gif); background-repeat: no-repeat;"><p style="margin:0px; padding: 4px 0px 0px 16px;"><a name="store"></a>eikaiwa.fm　ストアー</p></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#store" onclick="toggleDisplay('answer5');">どうやって 英会話レッスンを購入したらよいのですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer5">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">まず <b>eikaiwa.fm</b> ストアーで購入したい英会話レッスンをお選びください．尚その際、各レッスン名をクリックするとサンプルを聴くことが出来ます。ご購入頂くには「カートに入れる」をクリックして、ショッピングカートに入れてください。複数のレッスンをご購入の場合でも、上記を繰り返して下さい。お支払い方法を選択したら「チェックアウト」をクリックして下さい。次に、お客さまご自身の情報をご記入頂きます。そちら情報を認証させて頂いた後に、ダウンロードのページが現れます。</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#store" onclick="toggleDisplay('answer6');">英会話レッスン購入後のダウンロード方法は？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer6">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">ご購入手続きが終了しますと、「ダウンロードページ」が現れます。そこでお買い上げ頂いた英会話レッスン名のすぐ隣にある「ダウンロード」をクリックすると、あなたのコンピューターへダウンロードが開始されます。また、ご購入と同時に<b>eikaiwa.fm</b> からご購入確認メールを送信させて頂きます。こちらでも同様の手順でダウンロードが可能です。</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#store" onclick="toggleDisplay('answer7');">ダウンロードしたのに、ファイルが見つかりません。どうしたらよいですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer7">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">あなたのコンピューターの設定を確認し、ファイルのダウンロード先をチェックして下さい。そこでの指定先にダウンロードしたファイルがあるはずです。</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#store" onclick="toggleDisplay('answer8');">英会話レッスンを一度に複数購入したいのですが、いちいち「ショッピングカートとストアーの往復をしなければならず面倒です。解決方法はありますか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer8">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">簡単な設定変更で、商品購入毎に「ショッピングカート」に行かなくて済みます。「ショッピングカート」ページ上の「商品購入するたびに、ショッピングカートを表示して下さい。」という欄のチェックマークを外すだけです。</div>
+	</div>
+	
+	<div style="padding-top: 5px; clear: both;"></div>
+	
+	<div style="margin-top: 0px; width: 590px; height: 24px; text-align: left; font: bold 14px arial; color: #8C1414;  background-image: url(<? print IMG_DIR; ?>faq_header.gif); background-repeat: no-repeat;"><p style="margin:0px; padding: 4px 0px 0px 16px;"><a name="advertising"></a>eikaiwa.fm に広告を出稿する</p></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#advertising" onclick="toggleDisplay('answer9');">どのようにして eikaiwa.fm に広告を出稿できますか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer9">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">詳しくは<a href="http://www.eikaiwa.fm/index.php?page=advertise">こちらへ</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#advertising" onclick="toggleDisplay('answer10');">どんな種類の広告が出稿可能ですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer10">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">インストリームアド（レッスンとレッスンの間で放送）とコンテントアド（ご出稿頂くスポンサーに任意で選択頂いたレッスン・ニュースの前後に放送）があります。詳しくは<a href="http://www.eikaiwa.fm/index.php?page=advertise">こちらへ</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#advertising" onclick="toggleDisplay('answer11');">eikaiwa.fm はインストリームアド、コンテントアド、またはオリジナル英会話レッスンの制作も手伝ってくれるのですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer11">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="mailto: <? print hex_encode("dave@nihongo.fm"); ?>" class="mailto"><? print hex_encode("dave@nihongo.fm"); ?></a>までメールでご連絡下さい。ご希望の広告内容を具体的にお伝え頂いた後、追ってお見積もりさせて頂きます。</div>
+	</div>
+	
+	<div style="padding-top: 5px; clear: both;"></div>
+	
+	<div style="margin-top: 0px; width: 590px; height: 24px; text-align: left; font: bold 14px arial; color: #8C1414;  background-image: url(<? print IMG_DIR; ?>faq_header.gif); background-repeat: no-repeat;"><p style="margin:0px; padding: 4px 0px 0px 16px;"><a name="selling"><a/>eikaiwa.fmストアー でオーディオ教材を販売する</p></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#selling" onclick="toggleDisplay('answer12');">どうやって eikaiwa.fm ストアーで英会話オーディオ教材を販売出来るのですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">詳しくは<a href="http://www.eikaiwa.fm/index.php?page=sell">こちらへ</a></div>
+	</div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#selling" onclick="toggleDisplay('answer12');">誰でも eikaiwa.fm で英会話オーディオ教材を販売出来るのですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer12">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">原則として、教材に関する著作権をお持ちの方、または団体代表者の方のみに限らせて頂きます。が、上記に該当しない方（団体）でも、ネイティブな正しい発音の正確かつ良質なオリジナルオーディオ教材をお持ちであれば、<b>eikaiwa.fm</b> ストアーで教材販売して頂くことが出来ます。</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#selling" onclick="toggleDisplay('answer14');">eikaiwa.fm は、私が制作した教材に関して、eikaiwa.fm 規定の 「英会話レッスン」用フォーマットへ編集する作業をヘルプしてくれるのですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer14">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">はい、お手伝い致します。<a href="mailto: <? print hex_encode("dave@nihongo.fm"); ?>" class="mailto"><? print hex_encode("dave@nihongo.fm"); ?></a> までメールでご連絡下されば、詳しくご案内致します。</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#selling" onclick="toggleDisplay('answer15');">決済方法は？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer15">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">四半期ベースで決算しPaypal システムにて決算いたします。日本国内では銀行振り込みにての決算が可能な場合もございます。</div>
+	</div>
+	
+	<div style="padding-top: 5px; clear: both;"></div>
+	
+	<div style="margin-top: 0px; width: 590px; height: 24px; text-align: left; font: bold 14px arial; color: #8C1414;  background-image: url(<? print IMG_DIR; ?>faq_header.gif); background-repeat: no-repeat;"><p style="margin:0px; padding: 4px 0px 0px 16px;"><a name="misc"></a>その他</p></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#misc" onclick="toggleDisplay('answer17');">レッスンの翻訳内容に関して質問があります。誰に言えばいいのですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer17">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;"><b>eikaiwa.fm</b>は、 皆様のご意見・ご質問等、真摯に受け止めさせて頂いております。もし翻訳内容等に関して不明な点等ございましたら、<a href="mailto: <? print hex_encode("dave@nihongo.fm"); ?>" class="mailto"><? print hex_encode("dave@nihongo.fm"); ?></a>。までご連絡お願い致します。また、お手数でなければ、該当部分を含むレッスン名、箇所など詳しくお教え下さい。ご指摘の箇所に関して直ちに内容確認させて頂き、追って連絡致します。</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#misc" onclick="toggleDisplay('answer18');">eikaiwa.fm における「英会話レッスン」とは何ですか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div id="answer18">
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">「英会話レッスン」は日本語とそれに対応する英語の単語、フレーズから成り立っています（４〜６分間）。各「英会話レッスン」では、まずポイントになる単語またはフレーズが日本語で読まれ、その後それに対応する英語が２回読まれます。英語はネイティブスピーカーの音声にて録音されている為、このリスニングレッスンによって英語の正しい発音を”音”で学ぶことが出来ます。さらに、各英単語・フレーズの間には短い空白時間がありますので、その間に実際に口に出して発音することで、正しい発音の勉強が出来るようになっています。<p style="margin: 6px 0px 0px 0px; padding: 0px;">英会話レッスンでは、特定の話題または分野が取り上げられています。それぞれのレッスンは、リスナーが効率的・効果的に学習出来るよう、気負ったり、逆に退屈したりしないような長さに監修されています。尚、<b>eikaiwa.fm</b> RADIO のレッスンは約２分間、<b>eikaiwa.fm</b> ストアーでダウンロード出来る高品質、フル 英会話レッスンは４〜6分間となっています。</p></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="margin-top: 4px; padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #8C1414;">Q:</div>
+	<div style="<? print $faq_margin; ?> width: 536px; padding-top: 2px; padding-right: 16px; float: right; font: 12px arial; color: #000;"><a href="#misc" onclick="toggleDisplay('answer18');">どうしたら eikaiwa.fm の音質をさらに向上出来ますか？</a></div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	
+	<div>
+	<div style="padding-left: 16px; width: 16px; float: left; text-align: right; font: bold 14px arial; color: #000;">A:</div>
+	<div style="width: 536px; <? print $faq_padding; ?> padding-right: 16px; float: right; font: 12px arial; color: #000;">iPod その他 MP3プレーヤーの場合、内蔵のイコライザーにて最適の音質になるよう調整して下さい。コンピューターでお聴きの場合、他のハイクオリティスピーカー、ヘッドフォンをご使用頂くか、ホームオーディオシステムとお繋ぎ頂くことで音質の向上が期待出来るでしょう。詳しくは、是非コンピューターの取り扱い説明書をご参照下さい。</div>
+	</div>
+
+</div>

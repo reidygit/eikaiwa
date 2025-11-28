@@ -1,0 +1,104 @@
+﻿
+<?
+	if (isset($_GET["newuser"]))
+	{
+		$action = "?commitnew";
+	}
+	if (isset($_GET["edituser"]))
+	{
+		$action = "?commitupdate";
+	}
+?>
+<table>
+<tr>
+	<td style="vertical-align: top;">
+		<form name="user_admin" id="user_admin" method="post" action="<?php print $action; ?>">
+		<table border="0" cellspacing="0" cellpadding="0" style="padding: 6px; font-family: arial, helvetica, sans-serif; font-size: 11px; border-style: solid; border-color: #8C1414; border-width: 1px;">
+			<?
+			if (isset($_GET["edituser"]))
+			{
+			?>
+			<tr>
+				<td style="padding-bottom: 2px; text-align: right;">Send mail:</td>
+				<td style="width: 10px;"></td>
+				<td style="padding-bottom: 2px;"><a href="./quick_mailer.php&#063;email=<? print $email; ?>" target="newWindow" onclick="javascript: secondwindow = open('./quick_mailer.php&#063;email=<? print $email; ?>', 'low', 'height=500,width=475,scrollbars=no'); return false"><img src="../img/mail.gif" border="" alt=""></a></td>
+			</tr>
+			<?
+			}
+			?>
+			<tr>
+				<td style="text-align: right;">Status:</td>
+				<td style="width: 10px;"></td>
+				<td>
+					<select name="status" style="margin-right: 4px; font-size: 11px;">
+					<option value="current" <? if ($user[0]->status == "current"){ print "selected=\"selected\""; } ?>>current</option>
+					<option value="cancelled" <? if ($user[0]->status == "cancelled"){ print "selected=\"selected\""; } ?>>cancelled</option>
+					<option value="disabled" <? if ($user[0]->status == "disabled"){ print "selected=\"selected\""; } elseif (!isset($user)) { print "selected=\"selected\""; } ?>>disabled</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">First Name:</td>
+				<td style="width: 10px;"></td>
+				<td><input type="text" name="first_name" value="<? print $user[0]->first_name; ?>"/></td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">Last Name:</td>
+				<td style="width: 10px;"></td>
+				<td><input type="text" name="last_name" value="<? print $user[0]->last_name; ?>"/></td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">E-mail:</td>
+				<td style="width: 10px;"></td>
+				<td><input size="30" type="text" name="email" value="<? print $user[0]->email; ?>"/></td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">Password:</td>
+				<td style="width: 10px;"></td>
+				<td><input type="text" name="password" value=""/></td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; padding-top: 4px;">E-updates:</td>
+				<td style="width: 10px;"></td>
+				<td>
+					<input type="radio" name="e_updates" value="1" <? if ($user[0]->e_updates == "1"){ print "checked=\"checked\""; } ?>> Yes
+					<br>
+					<input type="radio" name="e_updates" value="0" <? if ($user[0]->e_updates == "0"){ print "checked=\"checked\""; } elseif (!isset($user)) { print "checked=\"checked\""; } ?>> No	
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right;">Region:</td>
+				<td style="width: 10px;"></td>
+				<td>
+					<select name="region" style="margin-right: 4px; font-size: 11px;">
+					<option value="" <? if ($user[0]->region == ""){ print "selected=\"selected\""; } elseif (!isset($user)) { print "selected=\"selected\""; } ?>>Select a region</option>
+					<option value="hokkaido" <? if ($user[0]->region == "hokkaido"){ print "selected=\"selected\""; } ?>>Hokkaido</option>
+					<option value="tohoku" <? if ($user[0]->region == "tohoku"){ print "selected=\"selected\""; } ?>>Tohoku</option>
+					<option value="kanto" <? if ($user[0]->region == "kanto"){ print "selected=\"selected\""; } ?>>Kanto</option>
+					<option value="chubu" <? if ($user[0]->region == "chubu"){ print "selected=\"selected\""; } ?>>Chubu</option>
+					<option value="kinki" <? if ($user[0]->region == "kinki"){ print "selected=\"selected\""; } ?>>Kinki</option>
+					<option value="chugoku" <? if ($user[0]->region == "chugoku"){ print "selected=\"selected\""; } ?>>Chugoku</option>
+					<option value="shikoku" <? if ($user[0]->region == "shikoku"){ print "selected=\"selected\""; } ?>>Shikoku</option>
+					<option value="kyushu" <? if ($user[0]->region == "kyushu"){ print "selected=\"selected\""; } ?>>Kyushu/Okinawa</option>
+					<option value="outside" <? if ($user[0]->region == "outside"){ print "selected=\"selected\""; } ?>>Outside Japan</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: right; vertical-align: top; padding-top: 6px;">Notes:</td>
+				<td style="width: 10px;"></td>
+				<td style="padding-top: 4px;"><textarea name="notes" rows="10" cols="28" ><? print $user[0]->notes; ?></textarea></td>
+			</tr>
+			<tr>
+				<td style="vertical-align: top; padding-top: 4px;"></td>
+				<td style="width: 10px;"></td>
+				<td style="padding-top: 10px;"><input type="submit" value="commit"/></td>
+			</tr>
+		</table>
+		</form>
+	</td>
+	<td style="vertical-align: top;">
+		<? if (!isset($_GET['newuser'])) { include_once("transactions_short.php"); } ?>
+	</td>
+</tr>
+</table>

@@ -1,0 +1,204 @@
+<?php
+
+include_once("ez_sql.php");
+include_once("rand.php");
+include_once("email_class.php");
+
+function new_order($email,$password,$first_name,$last_name,$txn_type,$subscr_id,$txn_id,$item_name,$mc_gross)
+{
+	
+	if (stristr($item_name, "nihongo") == true)
+	{
+		$db2 = new db("reidgrec_15","ue4MW7Vh","reidgrec_malibupanda","qs2035.pair.com");
+	}
+		elseif (stristr($item_name, "eikaiwa") == true)
+		{
+			$db2 = new db("reidgrec_16_w","h2KqE9ui","reidgrec_eikaiwa","qs2035.pair.com");
+		}
+	
+	// checks if the subscriber is already in our user database
+	if ($test = $db2->get_var("SELECT user_id FROM users WHERE email = '$email'"))
+	{
+		$query = "UPDATE users SET users.password = '$password', users.first_ame = '$first_name', users.last_name = '$last_name' WHERE users.email = '$email'";
+		$db2->query($query);
+	}
+		else
+		{
+			$query = "INSERT INTO users (email,password,first_name,last_name) VALUES ('$email','$password','$first_name','$last_name')";
+			$db2->query($query);
+		}
+	
+	// enter order info
+	$order_query = "INSERT INTO paypal_subscriptions (txn_type,subscr_id,txn_id,item_name,mc_gross) VALUES ('$txn_type','$subscr_id','$txn_id','$item_name',$mc_gross)";
+	$db2->query($order_query);
+	
+	// get user_id get order_id
+	$user_id_query = "SELECT user_id FROM users WHERE email = '$email'";
+	$user_id = $db2->get_var($user_id_query);
+	
+	// enter subscr_id and order_id 
+	$join = "INSERT INTO users_subscriptions (user_id,subscr_id) VALUES ($user_id,'$subscr_id')";
+	$db2->query($join);
+}
+
+function process_order($txn_type,$subscr_id,$txn_id,$item_name,$mc_gross)
+{
+	if (stristr($item_name, "nihongo") == true)
+	{
+		$db2 = new db("reidgrec_15","ue4MW7Vh","reidgrec_malibupanda","qs2035.pair.com");
+	}
+		elseif (stristr($item_name, "eikaiwa") == true)
+		{
+			$db2 = new db("reidgrec_16_w","h2KqE9ui","reidgrec_eikaiwa","qs2035.pair.com");
+		}
+		
+	$order_query = "INSERT INTO paypal_subscriptions (txn_type,subscr_id,txn_id,item_name,mc_gross) VALUES ('$txn_type','$subscr_id','$txn_id','$item_name',$mc_gross)";
+	$db2->query($order_query);
+	return($order_query);
+}
+
+function process_cancellation($txn_type,$subscr_id,$item_name)
+{
+	if (stristr($item_name, "nihongo") == true)
+	{
+		$db2 = new db("reidgrec_15","ue4MW7Vh","reidgrec_malibupanda","qs2035.pair.com");
+	}
+		elseif (stristr($item_name, "eikaiwa") == true)
+		{
+			$db2 = new db("reidgrec_16_w","h2KqE9ui","reidgrec_eikaiwa","qs2035.pair.com");
+		}
+		
+	$order_query = "INSERT INTO paypal_subscriptions (txn_type,subscr_id,item_name) VALUES ('$txn_type','$subscr_id','$item_name')";
+	$db2->query($order_query);
+	return($order_query);
+}
+
+// change this to the email account you registered with
+$account_email = "help@sleepypanda.com";
+
+// read the post from PayPal system and add 'cmd'
+$req = 'cmd=_notify-validate';
+
+foreach ($_POST as $key => $value) {
+$value = urlencode(stripslashes($value));
+$req .= "&$key=$value";
+}
+
+// open log file
+$filename = '/usr/www/users/reidgrec/eikaiwa/admin/pp_ipn.log';
+$today = date("F j, Y, g:i a");
+$log = fopen($filename, "a+");
+
+// post back to PayPal system to validate
+$header .= "POST /cgi-bin/webscr HTTP/1.0\r\n";
+$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
+$header .= "Content-Length: " . strlen($req) . "\r\n\r\n";
+$fp = fsockopen ("www.sandbox.paypal.com", 80, $errno, $errstr, 100);
+
+if (!$fp) 
+{
+	fwrite($log, "Failed to open HTTP connection!\n");
+}
+	else 
+	{
+		fputs ($fp, $header . $req);
+		while (!feof($fp)) 
+		{
+			$res = fgets ($fp, 1024);
+			if (strcmp ($res, "VERIFIED") == 0) 
+			{
+				// sets post variables from pp
+				$first_name = $_POST['first_name'];
+				$last_name = $_POST['last_name'];
+				$email = $_POST['payer_email'];
+				$txn_id = $_POST['txn_id'];
+				$txn_type = $_POST['txn_type'];
+				$mc_gross = $_POST['mc_gross'];
+				$item_name = $_POST['item_name'];
+				$subscr_id = $_POST['subscr_id'];
+				$payment_date = $_POST['payment_date'];
+				$payment_status = $_POST['payment_status'];
+				
+				$receiver_email = $_POST['receiver_email'];
+								
+				$verify_query = "SELECT txn_id FROM paypal_subscriptions WHERE txn_id = '$txn_id'";
+				
+				// does three more checks to verify that the order is real before processing
+				if ($account_email == $receiver_email)
+				{
+					if (stristr($item_name, "nihongo") == true)
+					{
+						$db2 = new db("reidgrec_15","ue4MW7Vh","reidgrec_malibupanda","qs2035.pair.com");
+					}
+						elseif (stristr($item_name, "eikaiwa") == true)
+						{
+							$db2 = new db("reidgrec_16_w","h2KqE9ui","reidgrec_eikaiwa","qs2035.pair.com");
+						}
+					
+					// processes an subscription payment
+					if ($db2->query($verify_query) == false && $txn_type == "subscr_payment" && $payment_status == "Completed")
+					{
+						if ($db2->query("SELECT user_id FROM users_subscriptions WHERE subscr_id = '$subscr_id'") == false)
+						{
+							//subscr_id is new process new subscription
+							
+							// generate auto password
+							$pass = new passwordClass();
+							$password = $pass->create_password();
+							
+							// send new user email for new subscriber
+							$mail = new emailClass();
+							$mail->subscription_new($email, $password);
+							
+							// enter order data into the database
+							new_order($email,$password,$first_name,$last_name,$txn_type,$subscr_id,$txn_id,$item_name,$mc_gross);
+							
+							// set user status to current
+							$db2->query("UPDATE users SET users.status = 'current' WHERE users.email = '$email'");
+						}
+							else
+							{
+								//subscr_id is current process renewal
+								
+								// send thanks for continuing your subscription email
+								$mail = new emailClass();
+								$mail->subscription_renewal($email);
+								
+								// enter order data into the database
+								process_order($txn_type,$subscr_id,$txn_id,$item_name,$mc_gross);
+								
+								// set user status to current
+								$db2->query("UPDATE users SET users.status = 'current' WHERE users.email = '$email'");
+							}	
+							
+					}
+					
+					// processes a subscription cancellation
+					if ($txn_type == "subscr_cancel")
+					{
+						$cancel = "cancelled";
+						// enter order data into the database
+						$q = process_cancellation($txn_type,$subscr_id,$item_name);
+						
+						// send cancellation confirmation email
+						$mail = new emailClass();
+						$mail->subscription_cancellation($email);
+						
+						// set user status to cancelled
+						$db2->query("UPDATE users SET users.status = 'canelled' WHERE users.email = '$email'");
+					}
+				
+				}
+				
+				// just in case log
+				fwrite($log, $q. $cancel . $today. $req. ", Verified\n");
+			}
+			else if (strcmp ($res, "INVALID") == 0)
+			{
+				// bad bad bad
+				fwrite($log, $today . ", Invalid\n"); 
+			}
+		}
+	fclose ($fp);
+	}
+?>
