@@ -1,5 +1,6 @@
 # Audio files (too large for Git)
 /audio/radio/tracks/*.mp3
+/audio/radio/tracks/*.mp4
 /audio/free/*.mp3
 /audio/podcast/*.m4a
 /audio/samples/**/*.mp3

@@ -1,26 +1,1330 @@
 {
-  "tracks": [
-    {
-      "filename": "sample001.mp3",
-      "title": "Sample Lesson 1",
-      "artist": "Eikaiwa.fm",
-      "duration": 120
-    },
-    {
-      "filename": "sample002.mp3",
-      "title": "Sample Lesson 2",
-      "artist": "Eikaiwa.fm",
-      "duration": 150
-    }
-  ],
-  "info": {
-    "description": "Replace the sample tracks above with your actual MP3 files. Each track should have:",
-    "fields": {
-      "filename": "The MP3 filename in the tracks/ directory",
-      "title": "Display title for 'Now Playing'",
-      "artist": "Artist name (e.g., 'Eikaiwa.fm')",
-      "duration": "Track length in seconds (optional)"
-    },
-    "instructions": "Add all 100-200 tracks to the 'tracks' array following the same format."
-  }
+    "tracks": [
+        {
+            "filename": "無料 Eikaiwa.fm_SenseiSagasu.comの提供でおおくりしました__最初のレッスンの話 (パート１).mp4",
+            "title": "SenseiSagasu.comの提供でおおくりしました__最初のレッスンの話 (パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_SenseiSagasu.comの提供でおおくりしました__最初の生徒と教師の連絡 (パート1).mp4",
+            "title": "SenseiSagasu.comの提供でおおくりしました__最初の生徒と教師の連絡 (パート1)",
+            "artist": "Eikaiwa.fm",
+            "duration": 143
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_SenseiSagasu.comの提供でおおくりしました__最初の生徒と教師の連絡 (パート２).mp4",
+            "title": "SenseiSagasu.comの提供でおおくりしました__最初の生徒と教師の連絡 (パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 149
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_SenseiSagasu.comの提供でおおくりしました__最初の生徒と教師の連絡 (パート４).mp4",
+            "title": "SenseiSagasu.comの提供でおおくりしました__最初の生徒と教師の連絡 (パート４)",
+            "artist": "Eikaiwa.fm",
+            "duration": 153
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 10）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 10）",
+            "artist": "Eikaiwa.fm",
+            "duration": 147
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 12）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 12）",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 13）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 13）",
+            "artist": "Eikaiwa.fm",
+            "duration": 129
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 14）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 14）",
+            "artist": "Eikaiwa.fm",
+            "duration": 132
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 1）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 1）",
+            "artist": "Eikaiwa.fm",
+            "duration": 121
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 2）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 2）",
+            "artist": "Eikaiwa.fm",
+            "duration": 120
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 4）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 4）",
+            "artist": "Eikaiwa.fm",
+            "duration": 122
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 6）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 6）",
+            "artist": "Eikaiwa.fm",
+            "duration": 124
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 8）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 8）",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの動詞（パート 9）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの動詞（パート 9）",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの名詞（パート 2）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの名詞（パート 2）",
+            "artist": "Eikaiwa.fm",
+            "duration": 121
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの名詞（パート 4）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの名詞（パート 4）",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの名詞（パート 5）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの名詞（パート 5）",
+            "artist": "Eikaiwa.fm",
+            "duration": 122
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの名詞（パート 6）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの名詞（パート 6）",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの名詞（パート 7）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの名詞（パート 7）",
+            "artist": "Eikaiwa.fm",
+            "duration": 122
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_ビジネス単語マスター__ビジネスの名詞（パート 9）.mp4",
+            "title": "ビジネス単語マスター__ビジネスの名詞（パート 9）",
+            "artist": "Eikaiwa.fm",
+            "duration": 138
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__おもちゃ（パート１).mp4",
+            "title": "単語スキルアップ__おもちゃ（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 148
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__おもちゃ（パート２).mp4",
+            "title": "単語スキルアップ__おもちゃ（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__アウトドアの趣味（パート２).mp4",
+            "title": "単語スキルアップ__アウトドアの趣味（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__アウトドアスポーツ用具（パート１).mp4",
+            "title": "単語スキルアップ__アウトドアスポーツ用具（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 124
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__アウトドアスポーツ用具（パート２).mp4",
+            "title": "単語スキルアップ__アウトドアスポーツ用具（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__アパートで（パート１).mp4",
+            "title": "単語スキルアップ__アパートで（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 107
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__アパートで（パート２).mp4",
+            "title": "単語スキルアップ__アパートで（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 118
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__アルコール飲料.mp4",
+            "title": "単語スキルアップ__アルコール飲料",
+            "artist": "Eikaiwa.fm",
+            "duration": 131
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__インドアの趣味.mp4",
+            "title": "単語スキルアップ__インドアの趣味",
+            "artist": "Eikaiwa.fm",
+            "duration": 136
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ウィンタースポーツ用具.mp4",
+            "title": "単語スキルアップ__ウィンタースポーツ用具",
+            "artist": "Eikaiwa.fm",
+            "duration": 145
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__オフィスの中（パート１).mp4",
+            "title": "単語スキルアップ__オフィスの中（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 121
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__オーディオ・ビデオの用語（パート１).mp4",
+            "title": "単語スキルアップ__オーディオ・ビデオの用語（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 112
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__オーディオ・ビデオの用語（パート２).mp4",
+            "title": "単語スキルアップ__オーディオ・ビデオの用語（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__キャンプ場で.mp4",
+            "title": "単語スキルアップ__キャンプ場で",
+            "artist": "Eikaiwa.fm",
+            "duration": 135
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ゲーム.mp4",
+            "title": "単語スキルアップ__ゲーム",
+            "artist": "Eikaiwa.fm",
+            "duration": 145
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__コンピューター（パート１).mp4",
+            "title": "単語スキルアップ__コンピューター（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__コンピューター（パート２).mp4",
+            "title": "単語スキルアップ__コンピューター（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 131
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__サイドディッシュ.mp4",
+            "title": "単語スキルアップ__サイドディッシュ",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ジュエリー.mp4",
+            "title": "単語スキルアップ__ジュエリー",
+            "artist": "Eikaiwa.fm",
+            "duration": 110
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__スポーツの動詞（パート１).mp4",
+            "title": "単語スキルアップ__スポーツの動詞（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 143
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__スポーツの用語（パート１).mp4",
+            "title": "単語スキルアップ__スポーツの用語（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 124
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__スポーツの用語（パート２).mp4",
+            "title": "単語スキルアップ__スポーツの用語（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 123
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__スポーツの種類（パート２).mp4",
+            "title": "単語スキルアップ__スポーツの種類（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 134
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ソフトドリンク（パート１).mp4",
+            "title": "単語スキルアップ__ソフトドリンク（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ソフトドリンク（パート２).mp4",
+            "title": "単語スキルアップ__ソフトドリンク（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ダイニングルームの中（パート１).mp4",
+            "title": "単語スキルアップ__ダイニングルームの中（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ダイニングルームの中（パート２).mp4",
+            "title": "単語スキルアップ__ダイニングルームの中（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__デパートで（パート１).mp4",
+            "title": "単語スキルアップ__デパートで（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 108
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__デパートで（パート２).mp4",
+            "title": "単語スキルアップ__デパートで（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__テレビと映画のジャンル.mp4",
+            "title": "単語スキルアップ__テレビと映画のジャンル",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__テーブルセッティング（パート１).mp4",
+            "title": "単語スキルアップ__テーブルセッティング（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 122
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__テーブルセッティング（パート２).mp4",
+            "title": "単語スキルアップ__テーブルセッティング（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 106
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ナッツ.mp4",
+            "title": "単語スキルアップ__ナッツ",
+            "artist": "Eikaiwa.fm",
+            "duration": 89
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__パン屋で.mp4",
+            "title": "単語スキルアップ__パン屋で",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ビーチで（パート１).mp4",
+            "title": "単語スキルアップ__ビーチで（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 111
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ビーチで（パート２).mp4",
+            "title": "単語スキルアップ__ビーチで（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 114
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ビーチで（パート３).mp4",
+            "title": "単語スキルアップ__ビーチで（パート３)",
+            "artist": "Eikaiwa.fm",
+            "duration": 117
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ファイナンス（パート１).mp4",
+            "title": "単語スキルアップ__ファイナンス（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ファイナンス（パート２).mp4",
+            "title": "単語スキルアップ__ファイナンス（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 120
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ホテルで　（パート１).mp4",
+            "title": "単語スキルアップ__ホテルで　（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__ホテルで（パート２).mp4",
+            "title": "単語スキルアップ__ホテルで（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 139
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__マリンスポーツ用具.mp4",
+            "title": "単語スキルアップ__マリンスポーツ用具",
+            "artist": "Eikaiwa.fm",
+            "duration": 151
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__レストランで.mp4",
+            "title": "単語スキルアップ__レストランで",
+            "artist": "Eikaiwa.fm",
+            "duration": 134
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__一生.mp4",
+            "title": "単語スキルアップ__一生",
+            "artist": "Eikaiwa.fm",
+            "duration": 131
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__上着.mp4",
+            "title": "単語スキルアップ__上着",
+            "artist": "Eikaiwa.fm",
+            "duration": 137
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__乗り物の種類.mp4",
+            "title": "単語スキルアップ__乗り物の種類",
+            "artist": "Eikaiwa.fm",
+            "duration": 132
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__乳製品.mp4",
+            "title": "単語スキルアップ__乳製品",
+            "artist": "Eikaiwa.fm",
+            "duration": 116
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__事務用品（パート２).mp4",
+            "title": "単語スキルアップ__事務用品（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 134
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__事務用品（パート３).mp4",
+            "title": "単語スキルアップ__事務用品（パート３)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__人と人との関係.mp4",
+            "title": "単語スキルアップ__人と人との関係",
+            "artist": "Eikaiwa.fm",
+            "duration": 133
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__人に関する単語（パート2).mp4",
+            "title": "単語スキルアップ__人に関する単語（パート2)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__人に関する単語（パート１).mp4",
+            "title": "単語スキルアップ__人に関する単語（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 124
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__仕事の動詞.mp4",
+            "title": "単語スキルアップ__仕事の動詞",
+            "artist": "Eikaiwa.fm",
+            "duration": 138
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__体の内部（パート１).mp4",
+            "title": "単語スキルアップ__体の内部（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__体の内部（パート２).mp4",
+            "title": "単語スキルアップ__体の内部（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 144
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__体の外部（パート１).mp4",
+            "title": "単語スキルアップ__体の外部（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 145
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__体の外部（パート２).mp4",
+            "title": "単語スキルアップ__体の外部（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 134
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__個人情報（パート１).mp4",
+            "title": "単語スキルアップ__個人情報（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 153
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__個人情報（パート２).mp4",
+            "title": "単語スキルアップ__個人情報（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 158
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__元素.mp4",
+            "title": "単語スキルアップ__元素",
+            "artist": "Eikaiwa.fm",
+            "duration": 142
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__入れ物.mp4",
+            "title": "単語スキルアップ__入れ物",
+            "artist": "Eikaiwa.fm",
+            "duration": 124
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__公共の交通機関（パート１).mp4",
+            "title": "単語スキルアップ__公共の交通機関（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 143
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__公共の施設.mp4",
+            "title": "単語スキルアップ__公共の施設",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__公園の中.mp4",
+            "title": "単語スキルアップ__公園の中",
+            "artist": "Eikaiwa.fm",
+            "duration": 134
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__写真の用語（パート１).mp4",
+            "title": "単語スキルアップ__写真の用語（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__写真の用語（パート２).mp4",
+            "title": "単語スキルアップ__写真の用語（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 143
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__劇場で（パート１).mp4",
+            "title": "単語スキルアップ__劇場で（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__動物の体.mp4",
+            "title": "単語スキルアップ__動物の体",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__動物の鳴き声.mp4",
+            "title": "単語スキルアップ__動物の鳴き声",
+            "artist": "Eikaiwa.fm",
+            "duration": 114
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__化粧品.mp4",
+            "title": "単語スキルアップ__化粧品",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__十二宮.mp4",
+            "title": "単語スキルアップ__十二宮",
+            "artist": "Eikaiwa.fm",
+            "duration": 113
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__句読点.mp4",
+            "title": "単語スキルアップ__句読点",
+            "artist": "Eikaiwa.fm",
+            "duration": 116
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__台所の中（パート１).mp4",
+            "title": "単語スキルアップ__台所の中（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 123
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__台所の中（パート２).mp4",
+            "title": "単語スキルアップ__台所の中（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 120
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__台所用品（パート２).mp4",
+            "title": "単語スキルアップ__台所用品（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 134
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__味に関する単語.mp4",
+            "title": "単語スキルアップ__味に関する単語",
+            "artist": "Eikaiwa.fm",
+            "duration": 122
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__図書館で（パート１).mp4",
+            "title": "単語スキルアップ__図書館で（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 120
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__国（パート１).mp4",
+            "title": "単語スキルアップ__国（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 133
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__国（パート２).mp4",
+            "title": "単語スキルアップ__国（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 140
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__国（パート３).mp4",
+            "title": "単語スキルアップ__国（パート３)",
+            "artist": "Eikaiwa.fm",
+            "duration": 133
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__地域.mp4",
+            "title": "単語スキルアップ__地域",
+            "artist": "Eikaiwa.fm",
+            "duration": 113
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__地理（パート１).mp4",
+            "title": "単語スキルアップ__地理（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 120
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__大きな数.mp4",
+            "title": "単語スキルアップ__大きな数",
+            "artist": "Eikaiwa.fm",
+            "duration": 122
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__天気（パート１).mp4",
+            "title": "単語スキルアップ__天気（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 142
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__天気（パート２).mp4",
+            "title": "単語スキルアップ__天気（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 144
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__学校で（パート１).mp4",
+            "title": "単語スキルアップ__学校で（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 124
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__学校で（パート２).mp4",
+            "title": "単語スキルアップ__学校で（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__学校の学科（パート１).mp4",
+            "title": "単語スキルアップ__学校の学科（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__宇宙の用語.mp4",
+            "title": "単語スキルアップ__宇宙の用語",
+            "artist": "Eikaiwa.fm",
+            "duration": 164
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__定期刊行物（パート１).mp4",
+            "title": "単語スキルアップ__定期刊行物（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__定期刊行物（パート２).mp4",
+            "title": "単語スキルアップ__定期刊行物（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__実験室の中.mp4",
+            "title": "単語スキルアップ__実験室の中",
+            "artist": "Eikaiwa.fm",
+            "duration": 114
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__家の内部.mp4",
+            "title": "単語スキルアップ__家の内部",
+            "artist": "Eikaiwa.fm",
+            "duration": 140
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__家の外まわり（パート１).mp4",
+            "title": "単語スキルアップ__家の外まわり（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 135
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__家の外まわり（パート２).mp4",
+            "title": "単語スキルアップ__家の外まわり（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 123
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__家具.mp4",
+            "title": "単語スキルアップ__家具",
+            "artist": "Eikaiwa.fm",
+            "duration": 131
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__家族（パート１).mp4",
+            "title": "単語スキルアップ__家族（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 141
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__寝室の中（パート１).mp4",
+            "title": "単語スキルアップ__寝室の中（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 121
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__寝室の中（パート２).mp4",
+            "title": "単語スキルアップ__寝室の中（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 123
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__居間の中.mp4",
+            "title": "単語スキルアップ__居間の中",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__工具（パート１).mp4",
+            "title": "単語スキルアップ__工具（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 148
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__工具（パート３).mp4",
+            "title": "単語スキルアップ__工具（パート３)",
+            "artist": "Eikaiwa.fm",
+            "duration": 115
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__工場で（パート１).mp4",
+            "title": "単語スキルアップ__工場で（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 120
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__幾何学（パート１).mp4",
+            "title": "単語スキルアップ__幾何学（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__幾何学（パート２).mp4",
+            "title": "単語スキルアップ__幾何学（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__店（パート１).mp4",
+            "title": "単語スキルアップ__店（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__店（パート２).mp4",
+            "title": "単語スキルアップ__店（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 138
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__店（パート４).mp4",
+            "title": "単語スキルアップ__店（パート４)",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__建設機器.mp4",
+            "title": "単語スキルアップ__建設機器",
+            "artist": "Eikaiwa.fm",
+            "duration": 116
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__怪我.mp4",
+            "title": "単語スキルアップ__怪我",
+            "artist": "Eikaiwa.fm",
+            "duration": 133
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__惑星.mp4",
+            "title": "単語スキルアップ__惑星",
+            "artist": "Eikaiwa.fm",
+            "duration": 87
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__感情に関する単語（パート２).mp4",
+            "title": "単語スキルアップ__感情に関する単語（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 138
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__掃除の用具（パート２).mp4",
+            "title": "単語スキルアップ__掃除の用具（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 124
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__教室の中（パート１).mp4",
+            "title": "単語スキルアップ__教室の中（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__教室の中（パート２).mp4",
+            "title": "単語スキルアップ__教室の中（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__教室の動詞（パート２).mp4",
+            "title": "単語スキルアップ__教室の動詞（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__数（1-20).mp4",
+            "title": "単語スキルアップ__数（1-20)",
+            "artist": "Eikaiwa.fm",
+            "duration": 119
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__文房具（パート１).mp4",
+            "title": "単語スキルアップ__文房具（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__文法用品.mp4",
+            "title": "単語スキルアップ__文法用品",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__料理の動詞（パート１).mp4",
+            "title": "単語スキルアップ__料理の動詞（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__料理の動詞（パート２).mp4",
+            "title": "単語スキルアップ__料理の動詞（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 116
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__日常の動詞（パート3).mp4",
+            "title": "単語スキルアップ__日常の動詞（パート3)",
+            "artist": "Eikaiwa.fm",
+            "duration": 134
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__日常の動詞（パート１).mp4",
+            "title": "単語スキルアップ__日常の動詞（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__日常の動詞（パート２).mp4",
+            "title": "単語スキルアップ__日常の動詞（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 116
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__映画の単語.mp4",
+            "title": "単語スキルアップ__映画の単語",
+            "artist": "Eikaiwa.fm",
+            "duration": 117
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__服に関する動詞.mp4",
+            "title": "単語スキルアップ__服に関する動詞",
+            "artist": "Eikaiwa.fm",
+            "duration": 110
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__服に関する単語（パート2).mp4",
+            "title": "単語スキルアップ__服に関する単語（パート2)",
+            "artist": "Eikaiwa.fm",
+            "duration": 138
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__服（パート１).mp4",
+            "title": "単語スキルアップ__服（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 112
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__服（パート２).mp4",
+            "title": "単語スキルアップ__服（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 132
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__木の種類.mp4",
+            "title": "単語スキルアップ__木の種類",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__本.mp4",
+            "title": "単語スキルアップ__本",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__果物（パート２).mp4",
+            "title": "単語スキルアップ__果物（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__植物（パート１).mp4",
+            "title": "単語スキルアップ__植物（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 138
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__植物（パート２).mp4",
+            "title": "単語スキルアップ__植物（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 149
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__楽器（パート２).mp4",
+            "title": "単語スキルアップ__楽器（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 141
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__標識.mp4",
+            "title": "単語スキルアップ__標識",
+            "artist": "Eikaiwa.fm",
+            "duration": 121
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__歯医者で.mp4",
+            "title": "単語スキルアップ__歯医者で",
+            "artist": "Eikaiwa.fm",
+            "duration": 141
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__治療（パート１).mp4",
+            "title": "単語スキルアップ__治療（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__洋食の朝食.mp4",
+            "title": "単語スキルアップ__洋食の朝食",
+            "artist": "Eikaiwa.fm",
+            "duration": 133
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__洗濯の単語.mp4",
+            "title": "単語スキルアップ__洗濯の単語",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__洗面所の棚の中（パート２).mp4",
+            "title": "単語スキルアップ__洗面所の棚の中（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 131
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__浴室 洗・面所 ・ トイレの中（パート１).mp4",
+            "title": "単語スキルアップ__浴室 洗・面所 ・ トイレの中（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 132
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__浴室・洗面所・トイレの中（パート２).mp4",
+            "title": "単語スキルアップ__浴室・洗面所・トイレの中（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 129
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__無脊椎動物.mp4",
+            "title": "単語スキルアップ__無脊椎動物",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__爬虫類.mp4",
+            "title": "単語スキルアップ__爬虫類",
+            "artist": "Eikaiwa.fm",
+            "duration": 114
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__物に関する単語（パート２).mp4",
+            "title": "単語スキルアップ__物に関する単語（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__甘いもの.mp4",
+            "title": "単語スキルアップ__甘いもの",
+            "artist": "Eikaiwa.fm",
+            "duration": 136
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__町の中のもの.mp4",
+            "title": "単語スキルアップ__町の中のもの",
+            "artist": "Eikaiwa.fm",
+            "duration": 124
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__病気.mp4",
+            "title": "単語スキルアップ__病気",
+            "artist": "Eikaiwa.fm",
+            "duration": 121
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__科学の用語.mp4",
+            "title": "単語スキルアップ__科学の用語",
+            "artist": "Eikaiwa.fm",
+            "duration": 137
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__空港の単語（パート１).mp4",
+            "title": "単語スキルアップ__空港の単語（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__職業（パート１).mp4",
+            "title": "単語スキルアップ__職業（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 139
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__職業（パート２).mp4",
+            "title": "単語スキルアップ__職業（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 144
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__職業（パート４).mp4",
+            "title": "単語スキルアップ__職業（パート４)",
+            "artist": "Eikaiwa.fm",
+            "duration": 143
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__肉類（パート１).mp4",
+            "title": "単語スキルアップ__肉類（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 122
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__色.mp4",
+            "title": "単語スキルアップ__色",
+            "artist": "Eikaiwa.fm",
+            "duration": 136
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__花.mp4",
+            "title": "単語スキルアップ__花",
+            "artist": "Eikaiwa.fm",
+            "duration": 148
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__薬味（パート１).mp4",
+            "title": "単語スキルアップ__薬味（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 118
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__薬味（パート２).mp4",
+            "title": "単語スキルアップ__薬味（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 115
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__計量の単位.mp4",
+            "title": "単語スキルアップ__計量の単位",
+            "artist": "Eikaiwa.fm",
+            "duration": 120
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__買い物の動詞.mp4",
+            "title": "単語スキルアップ__買い物の動詞",
+            "artist": "Eikaiwa.fm",
+            "duration": 131
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__買い物の用語.mp4",
+            "title": "単語スキルアップ__買い物の用語",
+            "artist": "Eikaiwa.fm",
+            "duration": 146
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__赤ん坊の物（パート２).mp4",
+            "title": "単語スキルアップ__赤ん坊の物（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__車のボンネットの中.mp4",
+            "title": "単語スキルアップ__車のボンネットの中",
+            "artist": "Eikaiwa.fm",
+            "duration": 130
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__車内（パート１).mp4",
+            "title": "単語スキルアップ__車内（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__車内（パート２).mp4",
+            "title": "単語スキルアップ__車内（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 126
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__農場で（パート１).mp4",
+            "title": "単語スキルアップ__農場で（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 140
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__遊び場で.mp4",
+            "title": "単語スキルアップ__遊び場で",
+            "artist": "Eikaiwa.fm",
+            "duration": 110
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__遊園地.mp4",
+            "title": "単語スキルアップ__遊園地",
+            "artist": "Eikaiwa.fm",
+            "duration": 140
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__運動着.mp4",
+            "title": "単語スキルアップ__運動着",
+            "artist": "Eikaiwa.fm",
+            "duration": 118
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__道路（パート１).mp4",
+            "title": "単語スキルアップ__道路（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 144
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__道路（パート２).mp4",
+            "title": "単語スキルアップ__道路（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__郵便局で（パート２).mp4",
+            "title": "単語スキルアップ__郵便局で（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 136
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__野菜（パート２).mp4",
+            "title": "単語スキルアップ__野菜（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 132
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__金物類（パート１).mp4",
+            "title": "単語スキルアップ__金物類（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 124
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__銀行で.mp4",
+            "title": "単語スキルアップ__銀行で",
+            "artist": "Eikaiwa.fm",
+            "duration": 132
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__陸のほ乳類（パート１).mp4",
+            "title": "単語スキルアップ__陸のほ乳類（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 159
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__陸のほ乳類（パート２).mp4",
+            "title": "単語スキルアップ__陸のほ乳類（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 133
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__電話の用語（パート１).mp4",
+            "title": "単語スキルアップ__電話の用語（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 146
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__電話の用語（パート２).mp4",
+            "title": "単語スキルアップ__電話の用語（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 136
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__靴（パート１).mp4",
+            "title": "単語スキルアップ__靴（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__飛行機の単語（パート１).mp4",
+            "title": "単語スキルアップ__飛行機の単語（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 122
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__飛行機の単語（パート２).mp4",
+            "title": "単語スキルアップ__飛行機の単語（パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 128
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__飛行機の単語（パート３).mp4",
+            "title": "単語スキルアップ__飛行機の単語（パート３)",
+            "artist": "Eikaiwa.fm",
+            "duration": 122
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__髪型.mp4",
+            "title": "単語スキルアップ__髪型",
+            "artist": "Eikaiwa.fm",
+            "duration": 131
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_単語スキルアップ__鳥類（パート１).mp4",
+            "title": "単語スキルアップ__鳥類（パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 119
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_日常会話マスター__日頃の会話 (パート１).mp4",
+            "title": "日常会話マスター__日頃の会話 (パート１)",
+            "artist": "Eikaiwa.fm",
+            "duration": 121
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_日常会話マスター__日頃の会話 (パート２).mp4",
+            "title": "日常会話マスター__日頃の会話 (パート２)",
+            "artist": "Eikaiwa.fm",
+            "duration": 121
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_日常会話マスター__日頃の会話 (パート４).mp4",
+            "title": "日常会話マスター__日頃の会話 (パート４)",
+            "artist": "Eikaiwa.fm",
+            "duration": 125
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_日常会話マスター__日頃の会話 (パート５).mp4",
+            "title": "日常会話マスター__日頃の会話 (パート５)",
+            "artist": "Eikaiwa.fm",
+            "duration": 120
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__患者の訴え (パート 1).mp4",
+            "title": "状況別英語__患者の訴え (パート 1)",
+            "artist": "Eikaiwa.fm",
+            "duration": 146
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__患者の訴え (パート 2).mp4",
+            "title": "状況別英語__患者の訴え (パート 2)",
+            "artist": "Eikaiwa.fm",
+            "duration": 134
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__患者の訴え (パート 3).mp4",
+            "title": "状況別英語__患者の訴え (パート 3)",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__患者への質問 (パート 1).mp4",
+            "title": "状況別英語__患者への質問 (パート 1)",
+            "artist": "Eikaiwa.fm",
+            "duration": 140
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__検査に関すること (パート 1).mp4",
+            "title": "状況別英語__検査に関すること (パート 1)",
+            "artist": "Eikaiwa.fm",
+            "duration": 127
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__検査に関すること (パート 2).mp4",
+            "title": "状況別英語__検査に関すること (パート 2)",
+            "artist": "Eikaiwa.fm",
+            "duration": 123
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__歯医者さんで (パート1).mp4",
+            "title": "状況別英語__歯医者さんで (パート1)",
+            "artist": "Eikaiwa.fm",
+            "duration": 114
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__歯医者さんで (パート2).mp4",
+            "title": "状況別英語__歯医者さんで (パート2)",
+            "artist": "Eikaiwa.fm",
+            "duration": 132
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__診断に関すること (パート 1).mp4",
+            "title": "状況別英語__診断に関すること (パート 1)",
+            "artist": "Eikaiwa.fm",
+            "duration": 145
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__診断に関すること (パート 2).mp4",
+            "title": "状況別英語__診断に関すること (パート 2)",
+            "artist": "Eikaiwa.fm",
+            "duration": 133
+        },
+        {
+            "filename": "無料 Eikaiwa.fm_状況別英語__診療に関すること (パート 2).mp4",
+            "title": "状況別英語__診療に関すること (パート 2)",
+            "artist": "Eikaiwa.fm",
+            "duration": 136
+        }
+    ]
 }
