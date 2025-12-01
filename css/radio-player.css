@@ -1,13 +1,13 @@
 /**
  * Eikaiwa.fm Radio Player Styles
- * Full-featured player matching existing site design
+ * Compact layout - Full-featured player matching existing site design
  */
 
 #eikaiwa-radio-player {
     font-family: Arial, sans-serif;
     font-size: 12px;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
     background-color: #FFFFFF;
     max-width: 280px;
     margin: 0 auto;
@@ -15,8 +15,8 @@
 
 /* Now Playing Section */
 #now-playing {
-    margin-bottom: 12px;
-    padding: 10px;
+    margin-bottom: 6px;
+    padding: 6px;
     background-color: #f9f9f9;
     border: 1px solid #C6C47B;
     border-radius: 3px;
@@ -26,29 +26,30 @@
     font-size: 13px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 
 #track-artist {
+    display: none; /* Hidden to save vertical space */
     font-size: 11px;
     color: #666;
 }
 
 /* Progress Bar Container */
 #progress-container {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 #progress-bar {
     width: 100%;
-    height: 6px;
+    height: 4px;
     background-color: #E7E3B5;
     border: 1px solid #C6C47B;
     border-radius: 3px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 #progress-fill {
@@ -66,11 +67,11 @@
 
 /* Main Player Controls */
 #player-controls {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
     flex-wrap: wrap;
 }
 
@@ -78,12 +79,12 @@
     background-color: #8C1414;
     color: #FFFFFF;
     border: none;
-    padding: 8px 10px;
-    font-size: 12px;
+    padding: 6px 8px;
+    font-size: 11px;
     cursor: pointer;
     border-radius: 3px;
     transition: background-color 0.2s;
-    min-width: 40px;
+    min-width: 38px;
 }
 
 #player-controls button:hover {
@@ -96,15 +97,16 @@
 
 #play-btn,
 #pause-btn {
-    padding: 10px 20px;
+    padding: 14px 28px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 /* Speed Control */
 #speed-control {
-    margin-bottom: 10px;
-    padding: 8px;
+    margin-bottom: 6px;
+    padding: 6px;
     background-color: #f9f9f9;
     border: 1px solid #C6C47B;
     border-radius: 3px;
@@ -112,21 +114,21 @@
 
 #speed-control label {
     display: block;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     color: #555;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .speed-btn {
     background-color: #E7E3B5;
     color: #333;
     border: 1px solid #C6C47B;
-    padding: 5px 10px;
-    font-size: 11px;
+    padding: 4px 6px;
+    font-size: 10px;
     cursor: pointer;
     border-radius: 3px;
-    margin: 2px;
+    margin: 1px;
     transition: all 0.2s;
 }
 
@@ -143,25 +145,25 @@
 
 /* Volume Control */
 #volume-control {
-    margin-bottom: 10px;
-    padding: 8px;
+    margin-bottom: 6px;
+    padding: 6px;
     background-color: #f9f9f9;
     border: 1px solid #C6C47B;
     border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 #volume-control label {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     color: #555;
 }
 
 #volume-slider {
-    width: 120px;
+    width: 100px;
     height: 4px;
     vertical-align: middle;
     cursor: pointer;
@@ -221,18 +223,18 @@
 
 /* Mode Controls (Loop & Shuffle) */
 #mode-controls {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
 }
 
 .mode-btn {
     background-color: #E7E3B5;
     color: #333;
     border: 1px solid #C6C47B;
-    padding: 6px 12px;
-    font-size: 11px;
+    padding: 5px 10px;
+    font-size: 10px;
     cursor: pointer;
     border-radius: 3px;
     transition: all 0.2s;
@@ -250,18 +252,18 @@
 
 /* Player Status */
 #player-status {
-    font-size: 11px;
+    font-size: 10px;
     color: #666;
     font-style: italic;
-    margin-bottom: 10px;
-    min-height: 16px;
-    padding: 4px;
+    margin-bottom: 6px;
+    min-height: 14px;
+    padding: 3px;
 }
 
 /* Queue Display */
 #queue-display {
-    margin-bottom: 10px;
-    padding: 8px;
+    margin-bottom: 6px;
+    padding: 6px;
     background-color: #f9f9f9;
     border: 1px solid #C6C47B;
     border-radius: 3px;
@@ -269,15 +271,15 @@
 }
 
 .queue-header {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     color: #8C1414;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     text-align: center;
 }
 
 #queue-list {
-    font-size: 10px;
+    font-size: 9px;
     color: #555;
 }
 
@@ -301,7 +303,7 @@
 
 /* Lesson Info Panel */
 #lesson-info {
-    padding: 8px;
+    padding: 6px;
     background-color: #E7E3B5;
     border: 1px solid #C6C47B;
     border-radius: 3px;
@@ -309,21 +311,21 @@
 }
 
 .info-header {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     color: #8C1414;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     text-align: center;
 }
 
 #lesson-details {
-    font-size: 10px;
+    font-size: 9px;
     color: #555;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 #lesson-details div {
-    padding: 2px 0;
+    padding: 1px 0;
 }
 
 #store-link {
@@ -336,8 +338,8 @@
     background-color: #8C1414;
     color: #FFFFFF;
     border: none;
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 7px 10px;
+    font-size: 11px;
     font-weight: bold;
     cursor: pointer;
     border-radius: 3px;
