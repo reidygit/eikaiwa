@@ -139,6 +139,51 @@ function getStats() {
     );
 }
 
+/**
+ * Get upcoming tracks in queue (preview)
+ */
+function getQueue($count = 5) {
+    // Initialize queue if not set
+    if (!isset($_SESSION['radio_queue']) || count($_SESSION['radio_queue']) == 0) {
+        $metadata = loadMetadata();
+        $tracks = $metadata['tracks'];
+
+        if (count($tracks) == 0) {
+            return array(
+                'success' => false,
+                'message' => 'No tracks available'
+            );
+        }
+
+        // Create array of track indices
+        $indices = range(0, count($tracks) - 1);
+        shuffleArray($indices);
+        $_SESSION['radio_queue'] = $indices;
+        $_SESSION['radio_all_tracks'] = $tracks;
+    }
+
+    // Get next N tracks from queue (without removing them)
+    $upcomingIndices = array_slice($_SESSION['radio_queue'], 0, $count);
+    $upcomingTracks = array();
+
+    foreach ($upcomingIndices as $index) {
+        if (isset($_SESSION['radio_all_tracks'][$index])) {
+            $track = $_SESSION['radio_all_tracks'][$index];
+            // Only send title and artist for preview
+            $upcomingTracks[] = array(
+                'title' => $track['title'],
+                'artist' => $track['artist']
+            );
+        }
+    }
+
+    return array(
+        'success' => true,
+        'queue' => $upcomingTracks,
+        'count' => count($upcomingTracks)
+    );
+}
+
 // Route action
 $response = array();
 
@@ -159,10 +204,15 @@ switch($action) {
         $response = getStats();
         break;
 
+    case 'queue':
+        $count = isset($_GET['count']) ? intval($_GET['count']) : 5;
+        $response = getQueue($count);
+        break;
+
     default:
         $response = array(
             'error' => true,
-            'message' => 'Invalid action. Valid actions: next, current, reset, stats'
+            'message' => 'Invalid action. Valid actions: next, current, reset, stats, queue'
         );
 }
 
