@@ -5,8 +5,8 @@ session_start();
 
 include_once("./php/ez_sql.php");
 
-$email_address = $_POST['newsletter_email_address'];
-$region = $_POST['newletter_region'];
+$email_address = $_POST['newsletter_email_address'] ?? '';
+$region = $_POST['newletter_region'] ?? '';
 
 if (!empty($email_address) && !empty($region))
 {
@@ -134,8 +134,12 @@ if (strpos($browser, "Safari"))
 				$eupdates_margin = "margin: 6px 0px 0px 0px;";
 				$unsubscribe_height = "226";
 			}
-		
-$page = $_GET["page"];
+
+$page = $_GET["page"] ?? '';
+
+// Initialize variables with defaults
+$toggle_js = '';
+$display_greeting = false;
 
 if ($page == "home")
 {
@@ -235,14 +239,7 @@ GA_googleAddSlot("ca-pub-9684247948196378", "HM_AU_EKW_bar");
 GA_googleFetchAds();
 </script>
 	<!-- META4 FRIENDS TOP BANNER START -->
-	<!-- OPENTRACKER HTML START -->
-	<script defer
-	src="http://server1.opentracker.net/?site=www.eikaiwa.fm"></script><noscript><a
-	href="http://www.opentracker.net" target="_blank"><img
-	src="http://img.opentracker.net/?cmd=nojs&site=www.eikaiwa.fm" alt="website
-	counter" border="0"></a> </noscript>
-	<!-- OPENTRACKER HTML END -->
-	
+
 	<style type="text/css">
 	#dhtmltooltip
 	{
@@ -432,14 +429,14 @@ GA_googleFetchAds();
 <a name="bottom"></a>
 <? include_once(HTML_DIR . "footer.html"); ?>
 	
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-3643743-1");
-pageTracker._initData();
-pageTracker._trackPageview();
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VC0K67STWY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VC0K67STWY');
 </script>
 <!-- Howler.js Audio Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>

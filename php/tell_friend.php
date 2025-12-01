@@ -12,15 +12,7 @@
 	a:hover {color: #8C1414; text-decoration: none}
 	a:active {color: #777; text-decoration: none}
 	</style>
-	
-	<!-- OPENTRACKER HTML START -->
-	<script defer
-	src="http://server1.opentracker.net/?site=<? echo getenv('HTTP_HOST'); ?>"></script><noscript><a
-	href="http://www.opentracker.net" target="_blank"><img
-	src="http://img.opentracker.net/?cmd=nojs&site=<? echo getenv('HTTP_HOST'); ?>" alt="website
-	counter" border="0"></a> </noscript>
-	<!-- OPENTRACKER HTML END -->
-	
+
 	<script language="JavaScript" type="text/javascript">
 	<!--
 		function checkIt()
