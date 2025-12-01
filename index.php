@@ -5,8 +5,8 @@ session_start();
 
 include_once("./php/ez_sql.php");
 
-$email_address = $_POST['newsletter_email_address'] ?? '';
-$region = $_POST['newletter_region'] ?? '';
+$email_address = isset($_POST['newsletter_email_address']) ? $_POST['newsletter_email_address'] : '';
+$region = isset($_POST['newletter_region']) ? $_POST['newletter_region'] : '';
 
 if (!empty($email_address) && !empty($region))
 {
@@ -135,7 +135,7 @@ if (strpos($browser, "Safari"))
 				$unsubscribe_height = "226";
 			}
 
-$page = $_GET["page"] ?? '';
+$page = isset($_GET["page"]) ? $_GET["page"] : '';
 
 // Initialize variables with defaults
 $toggle_js = '';
