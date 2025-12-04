@@ -140,6 +140,7 @@ $page = isset($_GET["page"]) ? $_GET["page"] : '';
 // Initialize variables with defaults
 $toggle_js = '';
 $display_greeting = false;
+$onload = '';
 
 if ($page == "home")
 {
