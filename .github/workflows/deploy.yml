@@ -1,4 +1,4 @@
-name: Deploy to Pair Networks
+name: Deploy via SSH (eikaiwa)
 
 on:
   push:
@@ -9,15 +9,83 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out the repository
-      uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-    - name: Deploy via SFTP to Pair Networks
-      uses: wlixcc/SFTP-Deploy-Action@v1.2
+    - name: Deploy files via SCP
+      uses: appleboy/scp-action@v0.1.7
       with:
-        server: ${{ secrets.SFTP_HOST }}
-        username: ${{ secrets.SFTP_USER }}
-        password: ${{ secrets.SFTP_PASSWORD }}
-        remote_path: "/usr/home/reidgrec/public_html"
-        local_path: "./"
-        delete_remote_files: false
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        source: "./"
+        target: ${{ secrets.SSH_PATH }}
+        
+        # 🚫 EXCLUDE JUNK SO IT NEVER UPLOADS TO YOUR SERVER
+        exclude: >
+          .git/
+          .github/
+          .DS_Store
+          .gitignore
+          .claude/
+          name: Deploy via SSH (eikaiwa)
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Deploy files via SCP
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        source: "./"
+        target: ${{ secrets.SSH_PATH }}
+        
+        # 🚫 EXCLUDE JUNK SO IT NEVER UPLOADS TO YOUR SERVER
+        exclude: >
+          .git/
+          .github/
+          .DS_Store
+          .gitignore
+          .claude/
+          name: Deploy via SSH (eikaiwa)
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Deploy files via SCP
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        source: "./"
+        target: ${{ secrets.SSH_PATH }}
+        
+        # 🚫 EXCLUDE JUNK SO IT NEVER UPLOADS TO YOUR SERVER
+        exclude: >
+          .git/
+          .github/
+          .DS_Store
+          .gitignore
+          .claude/
+          *.md
