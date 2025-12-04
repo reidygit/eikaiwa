@@ -20,68 +20,8 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         source: "./"
         target: ${{ secrets.SSH_PATH }}
-        
-        # 🚫 EXCLUDE JUNK SO IT NEVER UPLOADS TO YOUR SERVER
-        exclude: >
-          .git/
-          .github/
-          .DS_Store
-          .gitignore
-          .claude/
-          name: Deploy via SSH (eikaiwa)
 
-on:
-  push:
-    branches: [ "main" ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Deploy files via SCP
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY }}
-        source: "./"
-        target: ${{ secrets.SSH_PATH }}
-        
-        # 🚫 EXCLUDE JUNK SO IT NEVER UPLOADS TO YOUR SERVER
-        exclude: >
-          .git/
-          .github/
-          .DS_Store
-          .gitignore
-          .claude/
-          name: Deploy via SSH (eikaiwa)
-
-on:
-  push:
-    branches: [ "main" ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Deploy files via SCP
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY }}
-        source: "./"
-        target: ${{ secrets.SSH_PATH }}
-        
-        # 🚫 EXCLUDE JUNK SO IT NEVER UPLOADS TO YOUR SERVER
+        # 🚫 EXCLUDE FILES YOU NEVER WANT ON YOUR SERVER
         exclude: >
           .git/
           .github/
