@@ -205,7 +205,7 @@ function hex_encode($email_address)
 	<meta name="keywords" content="英語ラジオ,英語リスニング,英語レッスン,NHK,英語勉強,英会話教師,個人英会話,英会話リスニング,英語語学,英会話学習,プライベートレッスン,教師,先生">
 		<meta name="description" content="24時間無料の英語ラジオやiPod用の英語勉強MP3ダウンロード。今すぐ聴きましょう！">
 		<meta name="copyright" content="Copyright 2006 - 2016. (有限会社英会話ドットエフエム) eikaiwa.fm, Ltd. (R. Greco)">
-	<link rel="stylesheet" type="text/css" href="./css/eikaiwa.css" />
+	<link rel="stylesheet" type="text/css" href="./css/eikaiwa.css?v=20251205" />
 	<? print $css; ?>
 	<? print $toggle_js; ?>
 	<script src="<? print JS_DIR; ?>menu.js" type="text/javascript"></script>
