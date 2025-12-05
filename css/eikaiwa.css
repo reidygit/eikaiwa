@@ -100,3 +100,37 @@ td.about_left {padding: 2px 12px 2px 4px; border-left: 1px solid #C6C47B; border
 td.about_right {padding: 2px 12px 2px 4px; border-right: 1px solid #C6C47B; border-bottom: 1px solid #C6C47B;}
 td.about_bottom_left {padding: 2px 12px 2px 4px; border-bottom: 1px solid #C6C47B; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; background: #E7E3B5;}
 td.about_bottom_right {padding: 2px 12px 2px 4px; border-bottom: 1px solid #C6C47B; border-right: 1px solid #C6C47B;}
+
+/* Flexible two-column layout for home page */
+.home-columns-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 590px;
+}
+
+.home-column {
+    flex: 0 0 290px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-column.left {
+    padding: 0 5px 0 0;
+}
+
+.home-column.right {
+    padding: 0 0 0 5px;
+}
+
+.cbox-content {
+    flex: 1;
+    min-height: 400px;
+    background: #fff;
+}
+
+.cbox-bottom-wrapper {
+    margin-top: auto;
+}

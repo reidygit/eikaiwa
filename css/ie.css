@@ -13,3 +13,18 @@ td.eupdates_a_region {padding: 2px 0px 0px 0px; text-align: right;}
 
 td.eupdates_a_submit {padding: 2px 0px 0px 0px; text-align: right;}
 td.eupdates_a_three {padding: 2px 0px 0px 0px;}
+
+/* IE6-9 doesn't support flexbox - use inline-block fallback */
+.home-columns-wrapper {
+    display: block;
+}
+
+.home-column {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cbox-content {
+    min-height: 400px !important;
+    height: auto !important;
+}

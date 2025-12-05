@@ -59,7 +59,7 @@ $browser = $_SERVER["HTTP_USER_AGENT"];
 if (strpos($browser, "Safari"))
 {
 	$css = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . CSS_DIR . "safari.css\" />";
-	$cbox_height = "height: 600px;";
+	$cbox_height = "min-height: 400px;";
 	$margin = "margin: 0px;";
 	$footer_padding = "padding-top: 10px; ";
 	$player_height = "186";
@@ -73,7 +73,7 @@ if (strpos($browser, "Safari"))
 		if (strpos($browser, "Macintosh"))
 		{
 			$css = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . CSS_DIR . "mozilla.css\" />";
-			$cbox_height = "height: 600px;";
+			$cbox_height = "min-height: 400px;";
 			$margin = "margin: 0px;";
 			$footer_padding = "padding-top: 10px; ";
 			$player_height = "186";
@@ -85,7 +85,7 @@ if (strpos($browser, "Safari"))
 		if (strpos($browser, "Windows"))
 		{
 			$css = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . CSS_DIR . "mozilla.css\" />";
-			$cbox_height = "height: 600px;";
+			$cbox_height = "min-height: 400px;";
 			$margin = "margin: 0px;";
 			$footer_padding = "padding-top: 10px; ";
 			$player_height = "196";
@@ -100,7 +100,7 @@ if (strpos($browser, "Safari"))
 			if (strpos($browser, "Mac"))
 			{
 				$css = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . CSS_DIR . "opera.css\" />";
-				$cbox_height = "height: 600px;";
+				$cbox_height = "min-height: 400px;";
 				$margin = "margin: 0px;";
 				$footer_padding = "padding-top: 10px; ";
 				$player_height = "186";
@@ -112,7 +112,7 @@ if (strpos($browser, "Safari"))
 			if (strpos($browser, "Windows"))
 			{
 				$css = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . CSS_DIR . "mozilla.css\" />";
-				$cbox_height = "height: 600px;";
+				$cbox_height = "min-height: 400px;";
 				$margin = "margin: 0px;";
 				$footer_padding = "padding-top: 10px; ";
 				$player_height = "186";
@@ -125,7 +125,7 @@ if (strpos($browser, "Safari"))
 			else
 			{
 				$css = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . CSS_DIR . "ie.css\" />";
-				$cbox_height = "height: 511px;";
+				$cbox_height = "min-height: 400px;";
 				$margin = "margin-top: -15px;";
 				$footer_padding = "";
 				$player_height = "206";

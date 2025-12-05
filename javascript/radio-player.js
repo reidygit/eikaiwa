@@ -19,6 +19,12 @@ var EikaiwaRadio = (function() {
     var progressInterval = null;
     var apiUrl = '/php/radio_api.php';
 
+    // Preroll configuration
+    var prerollPlayed = false;
+    var prerollSound = null;
+    var isPrerollMode = false;
+    var PREROLL_BASE_URL = '/prerolls/';
+
     // DOM elements
     var elements = {
         playBtn: null,
@@ -153,6 +159,113 @@ var EikaiwaRadio = (function() {
     }
 
     /**
+     * Detect user tier from cookies
+     * Returns 'premium' if eikaiwafm cookie exists, else 'free'
+     */
+    function getUserTier() {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.indexOf('eikaiwafm=') === 0) {
+                return 'premium';
+            }
+        }
+        return 'free';
+    }
+
+    /**
+     * Get preroll URL based on user tier
+     */
+    function getPrerollUrl() {
+        var tier = getUserTier();
+        return PREROLL_BASE_URL + 'eikaiwa_' + tier + '_preroll.mp3';
+    }
+
+    /**
+     * Check if preroll has already been played this session
+     */
+    function shouldPlayPreroll() {
+        if (prerollPlayed) {
+            return false;
+        }
+
+        if (typeof(Storage) !== "undefined") {
+            var played = sessionStorage.getItem('eikaiwa_preroll_played');
+            if (played === 'true') {
+                prerollPlayed = true;
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Mark preroll as played for this session
+     */
+    function markPrerollPlayed() {
+        prerollPlayed = true;
+
+        if (typeof(Storage) !== "undefined") {
+            sessionStorage.setItem('eikaiwa_preroll_played', 'true');
+        }
+    }
+
+    /**
+     * Load and play preroll audio
+     */
+    function playPreroll(callback) {
+        updateStatus('Loading preroll...');
+        isPrerollMode = true;
+
+        prerollSound = new Howl({
+            src: [getPrerollUrl()],
+            html5: true,
+            volume: elements.volumeSlider ? (elements.volumeSlider.value / 100) : 0.5,
+            onload: function() {
+                updateStatus('Playing preroll');
+            },
+            onplay: function() {
+                if (elements.trackTitle) {
+                    elements.trackTitle.textContent = 'Eikaiwa.fm Preroll';
+                }
+                if (elements.trackArtist) {
+                    elements.trackArtist.textContent = '';
+                }
+            },
+            onend: function() {
+                markPrerollPlayed();
+                isPrerollMode = false;
+
+                if (prerollSound) {
+                    prerollSound.unload();
+                    prerollSound = null;
+                }
+
+                updateStatus('Preroll complete, loading first track...');
+
+                if (callback) callback();
+            },
+            onerror: function(id, error) {
+                console.warn('Preroll failed to load:', error);
+                updateStatus('Skipping preroll (load error)');
+
+                isPrerollMode = false;
+                markPrerollPlayed();
+
+                if (prerollSound) {
+                    prerollSound.unload();
+                    prerollSound = null;
+                }
+
+                if (callback) callback();
+            }
+        });
+
+        prerollSound.play();
+    }
+
+    /**
      * Load and play next track
      */
     function loadNextTrack(callback) {
@@ -274,18 +387,38 @@ var EikaiwaRadio = (function() {
     }
 
     /**
-     * Play current or next track
+     * Play current or next track (with preroll support)
      */
     function play() {
+        // Check if we're in preroll mode
+        if (isPrerollMode) {
+            updateStatus('Please wait for preroll to finish');
+            return;
+        }
+
         if (currentSound) {
+            // Already have a track loaded - just play it
             currentSound.play();
         } else {
-            // Load first track
-            loadNextTrack(function(success) {
-                if (success && currentSound) {
-                    currentSound.play();
-                }
-            });
+            // No track loaded yet - check if we need preroll
+            if (shouldPlayPreroll()) {
+                // Play preroll first, then load first track
+                playPreroll(function() {
+                    // Callback after preroll ends
+                    loadNextTrack(function(success) {
+                        if (success && currentSound) {
+                            currentSound.play();
+                        }
+                    });
+                });
+            } else {
+                // No preroll needed - load first track directly
+                loadNextTrack(function(success) {
+                    if (success && currentSound) {
+                        currentSound.play();
+                    }
+                });
+            }
         }
     }
 
@@ -302,6 +435,12 @@ var EikaiwaRadio = (function() {
      * Play next track
      */
     function playNext() {
+        // Don't allow skipping during preroll
+        if (isPrerollMode) {
+            updateStatus('Please wait for preroll to finish');
+            return;
+        }
+
         loadNextTrack(function(success) {
             if (success && currentSound) {
                 currentSound.play();
@@ -313,6 +452,12 @@ var EikaiwaRadio = (function() {
      * Play previous track
      */
     function playPrevious() {
+        // Don't allow skipping during preroll
+        if (isPrerollMode) {
+            updateStatus('Please wait for preroll to finish');
+            return;
+        }
+
         if (trackHistory.length === 0) {
             updateStatus('No previous track');
             return;

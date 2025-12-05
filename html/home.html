@@ -25,11 +25,10 @@
 		</tr>
 	</table>
 	<br/>
-	<table style="margin: 0 auto; padding: 0px; border-collapse: collapse; font-family: Arial; font-size: 12px; text-align: left;">
-		<tr>
-			<td style="margin: 0px; padding: 0px 5px 0px 0px; vertical-align: top;">
-				<div style="width: 290px; height: 23px; padding: 0px; background-image: url(../img/free_tab.gif); background-repeat: no-repeat;"></div>
-				<div style="width: 276px; <? print $cbox_height; ?> padding: 0px 6px 0px 6px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; border-top: 1px solid #C6C47B;">
+	<div class="home-columns-wrapper" style="font-family: Arial; font-size: 12px; text-align: left;">
+		<div class="home-column left">
+			<div style="width: 290px; height: 23px; padding: 0px; background-image: url(../img/free_tab.gif); background-repeat: no-repeat;"></div>
+			<div class="cbox-content" style="width: 276px; <? print $cbox_height; ?> padding: 0px 6px 0px 6px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; border-top: 1px solid #C6C47B;">
 				<br><center>
 <!-- EIKAIWA.FM SELF-HOSTED RADIO PLAYER -->
 <div id="eikaiwa-radio-player">
@@ -124,12 +123,12 @@
 					</ul>
 					<p style="margin: 0px; padding: 6px 0px 0px 0px;">TUNE INをクリックして、オンエア放送を繰り返し聴いて、英語のスキルアップを目指しましょう！<strong> eikaiwa.fm</strong> RADIO は英語のリスニング・スピーキング・単語力を伸ばし、新しい表現を学ぶための全く新しいの勉強方法です！<strong>eikaiwa.fm</strong> RADIOはいつでも役に立つ英単語・フレーズをストリーミング配信しています。<strong>eikaiwa.fm</strong> RADIO はあなたの英語の勉強学習の強い身方、しかも無料です。</p>
 					<p style="margin: 0px; padding: 6px 0px 6px 0px;"><strong>eikaiwa.fm</strong> Radio ではサンプルレッスンをお届けしています。さらにより良い音質での英会話フルレッスンをご希望の方は、<a href="<? print STORE_URL; ?>"><strong>eikaiwa.fm</strong>ストアー</a>でご購入の上、ダウンロードして下さい。<br><br>
-				</div>
-				<div style="width: 290px; height: 14px; padding: 0px; background-image: url(../img/cbox-bottom-2.gif); background-repeat: no-repeat;"></div>
-			</td>
-			<td style="margin: 0px; padding: 0px 0px 0px 5px; vertical-align: top;">
-				<div style="width: 290px; height: 23px; padding: 0px; background-image: url(../img/premium_tab.gif); background-repeat: no-repeat;"></div>
-				<div style="width: 276px; <? print $cbox_height; ?> padding: 0px 6px 0px 6px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; border-top: 1px solid #C6C47B;">
+			</div>
+			<div class="cbox-bottom-wrapper" style="width: 290px; height: 14px; padding: 0px; background-image: url(../img/cbox-bottom-2.gif); background-repeat: no-repeat;"></div>
+		</div>
+		<div class="home-column right">
+			<div style="width: 290px; height: 23px; padding: 0px; background-image: url(../img/premium_tab.gif); background-repeat: no-repeat;"></div>
+			<div class="cbox-content" style="width: 276px; <? print $cbox_height; ?> padding: 0px 6px 0px 6px; border-left: 1px solid #C6C47B; border-right: 1px solid #C6C47B; border-top: 1px solid #C6C47B;">
 					<p style="margin: 0px; padding: 6px 0px 2px 0px; text-align: left; font-weight: bold;">本日のダウンロードトップ５：</p>
 					<? include_once("./html/top5_static.html"); ?><a href="<? print STORE_URL; ?>"><img src="../img/launch.gif" border="0" alt="Launch the Store!" style="margin: 0px; padding: 10px 0px 0px 0px;"/></a>
 					<ul style="list-style: none; margin: 0; padding: 6px 0px 0px 0px;">
@@ -147,11 +146,10 @@
 					</ul>
 					<p style="margin: 0px; padding: 6px 0px 0px 0px;"><strong>eikaiwa.fm</strong> RADIO より良い音質で、 さらに、フルレングスの英会話レッスンを聴きたい方、そして時間や場所を選ばずiPod・MP３プレイヤーで聴きたい方、CM無しで聴きたい方、そんな方には <strong>eikaiwa.fm</strong>ストアーがお勧めです。<strong>eikaiwa.fm</strong> ストアーではあなたの好きなレッスンが購入可能です。</p>
 					<p style="margin: 0px; padding: 6px 0px 6px 0px;"></p>
-				</div>
-				<div style="width: 290px; height: 14px; padding: 0px; background-image: url(../img/cbox-bottom-2.gif); background-repeat: no-repeat;"></div>
-			</td>
-		</tr>
-	</table>
+			</div>
+			<div class="cbox-bottom-wrapper" style="width: 290px; height: 14px; padding: 0px; background-image: url(../img/cbox-bottom-2.gif); background-repeat: no-repeat;"></div>
+		</div>
+	</div>
 	個人英語先生やマンツーマン語学レッスンの検索・紹介サイト:<br>
 	<a href="http://www.senseinavi.com/search.php" target="_blank"><img src="img/SN_468x60.jpg" alt="英会話先生や国語家庭教師の検索サイトSenseiNavi.com" width="468" height="60" border="0"></a><br>
 </div>
