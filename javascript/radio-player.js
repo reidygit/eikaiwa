@@ -32,6 +32,7 @@ var EikaiwaRadio = (function() {
         loopBtn: null,
         shuffleBtn: null,
         speedSelect: null,
+        progressContainer: null,
         progressBar: null,
         progressFill: null,
         currentTime: null,
@@ -60,6 +61,7 @@ var EikaiwaRadio = (function() {
         elements.loopBtn = document.getElementById('loop-btn');
         elements.shuffleBtn = document.getElementById('shuffle-btn');
         elements.speedSelect = document.getElementById('speed-select');
+        elements.progressContainer = document.getElementById('progress-container');
         elements.progressBar = document.getElementById('progress-bar');
         elements.progressFill = document.getElementById('progress-fill');
         elements.currentTime = document.getElementById('current-time');
@@ -212,6 +214,11 @@ var EikaiwaRadio = (function() {
         updateStatus('Loading: ' + track.title + '...');
         updateNowPlaying(track);
         updateLessonInfo(track);
+
+        // Show progress container when track is loaded
+        if (elements.progressContainer) {
+            elements.progressContainer.classList.add('active');
+        }
 
         // Create new Howler instance
         currentSound = new Howl({

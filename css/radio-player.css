@@ -35,9 +35,14 @@
     color: #666;
 }
 
-/* Progress Bar Container */
+/* Progress Bar Container - Hidden by default, shown when track is loaded */
 #progress-container {
     margin-bottom: 6px;
+    display: none;
+}
+
+#progress-container.active {
+    display: block;
 }
 
 #progress-bar {
