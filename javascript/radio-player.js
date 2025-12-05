@@ -31,7 +31,7 @@ var EikaiwaRadio = (function() {
         muteBtn: null,
         loopBtn: null,
         shuffleBtn: null,
-        speedBtns: null,
+        speedSelect: null,
         progressBar: null,
         progressFill: null,
         currentTime: null,
@@ -59,7 +59,7 @@ var EikaiwaRadio = (function() {
         elements.muteBtn = document.getElementById('mute-btn');
         elements.loopBtn = document.getElementById('loop-btn');
         elements.shuffleBtn = document.getElementById('shuffle-btn');
-        elements.speedBtns = document.querySelectorAll('.speed-btn');
+        elements.speedSelect = document.getElementById('speed-select');
         elements.progressBar = document.getElementById('progress-bar');
         elements.progressFill = document.getElementById('progress-fill');
         elements.currentTime = document.getElementById('current-time');
@@ -124,13 +124,11 @@ var EikaiwaRadio = (function() {
             });
         }
 
-        // Speed buttons
-        if (elements.speedBtns) {
-            elements.speedBtns.forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    var speed = parseFloat(this.getAttribute('data-speed'));
-                    setSpeed(speed);
-                });
+        // Speed select dropdown
+        if (elements.speedSelect) {
+            elements.speedSelect.addEventListener('change', function() {
+                var speed = parseFloat(this.value);
+                setSpeed(speed);
             });
         }
 
@@ -413,15 +411,9 @@ var EikaiwaRadio = (function() {
             currentSound.rate(speed);
         }
 
-        // Update active button
-        if (elements.speedBtns) {
-            elements.speedBtns.forEach(function(btn) {
-                if (parseFloat(btn.getAttribute('data-speed')) === speed) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
+        // Update select dropdown value
+        if (elements.speedSelect) {
+            elements.speedSelect.value = speed;
         }
 
         updateStatus('Playback speed: ' + speed + 'x');

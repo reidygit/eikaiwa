@@ -120,65 +120,60 @@
     color: #6B0F0F;
 }
 
-/* Speed Control - UNBOXED, INLINE */
-#speed-control {
+/* Volume & Speed Row - Combined on one line */
+#volume-speed-row {
     margin-bottom: 6px;
     padding: 4px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
+}
+
+/* Volume Control - Left side, takes up available space */
+#volume-control {
+    display: flex;
+    align-items: center;
     gap: 6px;
+    flex: 1;
 }
 
-#speed-control label {
-    font-size: 10px;
-    font-weight: bold;
-    color: #555;
-    margin: 0;
+/* Speed Control - Right side with dropdown */
+#speed-control {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    flex-shrink: 0;
 }
 
-.speed-btn {
+.speed-icon {
+    font-size: 14px;
+    line-height: 1;
+}
+
+#speed-select {
     background-color: #E7E3B5;
     color: #333;
     border: 1px solid #C6C47B;
-    padding: 4px 6px;
+    padding: 3px 4px;
     font-size: 10px;
     cursor: pointer;
     border-radius: 3px;
-    margin: 1px;
-    transition: all 0.2s;
+    font-family: Arial, sans-serif;
+    min-width: 50px;
 }
 
-.speed-btn:hover {
+#speed-select:hover {
     background-color: #C6C47B;
 }
 
-.speed-btn.active {
-    background-color: #8C1414;
-    color: #FFFFFF;
-    border-color: #8C1414;
-    font-weight: bold;
-}
-
-/* Volume Control - UNBOXED, INLINE */
-#volume-control {
-    margin-bottom: 6px;
-    padding: 4px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-}
-
-#volume-control label {
-    font-size: 10px;
-    font-weight: bold;
-    color: #555;
-    margin: 0;
+#speed-select:focus {
+    outline: 2px solid #8C1414;
+    outline-offset: 1px;
 }
 
 #volume-slider {
-    width: 100px;
+    flex: 1;
     height: 4px;
     vertical-align: middle;
     cursor: pointer;
@@ -395,13 +390,17 @@
         font-size: 13px;
     }
 
-    #volume-slider {
-        width: 100px;
+    #speed-select {
+        min-width: 45px;
+        font-size: 9px;
     }
 
-    .speed-btn {
-        padding: 4px 8px;
-        font-size: 10px;
+    #volume-speed-row {
+        gap: 6px;
+    }
+
+    .speed-icon {
+        font-size: 12px;
     }
 }
 
