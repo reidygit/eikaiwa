@@ -750,7 +750,12 @@ var EikaiwaRadio = (function() {
 
         var html = '<ul class="queue-items">';
         queue.forEach(function(track, index) {
-            html += '<li><span class="track-name">' + (index + 1) + '. ' + formatTitle(track.title) + '</span>';
+            var duration = track.duration ? formatTime(track.duration) : '';
+            var fullTitle = formatTitle(track.title);
+            var durationText = duration ? ' (' + duration + ')' : '';
+            html += '<li><span class="track-name track-tooltip-trigger">';
+            html += '<span class="track-visible">' + (index + 1) + '. ' + fullTitle + '</span>';
+            html += '<span class="track-tooltip-text">' + fullTitle + durationText + '</span></span>';
             html += '<a href="#" class="buy-btn-inline" onclick="return false;">購入<span class="tooltip-text">全レッスン購入</span></a></li>';
         });
         html += '</ul>';
@@ -777,44 +782,78 @@ if (document.readyState === 'loading') {
     EikaiwaRadio.init();
 }
 
-// Auto-hide tooltips after 1.5 seconds
+// Auto-hide tooltips after timeout
 (function() {
-    var tooltipTimeout = null;
+    var buyBtnTimeout = null;
+    var trackTooltipTimeout = null;
+    var activeTrackTrigger = null;
 
-    document.addEventListener('mouseenter', function(e) {
+    // Use mouseover/mouseout for better Safari compatibility
+    document.addEventListener('mouseover', function(e) {
+        // Handle buy button tooltips (1 second)
         var btn = e.target.closest('.buy-btn-inline, .buy-btn-top5');
-        if (!btn) return;
-
-        var tooltip = btn.querySelector('.tooltip-text');
-        if (!tooltip) return;
-
-        // Clear any existing timeout
-        if (tooltipTimeout) {
-            clearTimeout(tooltipTimeout);
+        if (btn) {
+            var tooltip = btn.querySelector('.tooltip-text');
+            if (tooltip) {
+                if (buyBtnTimeout) clearTimeout(buyBtnTimeout);
+                buyBtnTimeout = setTimeout(function() {
+                    tooltip.style.visibility = 'hidden';
+                    tooltip.style.opacity = '0';
+                }, 1000);
+            }
         }
 
-        // Auto-hide after 1 second
-        tooltipTimeout = setTimeout(function() {
-            tooltip.style.visibility = 'hidden';
-            tooltip.style.opacity = '0';
-        }, 1000);
-    }, true);
+        // Handle track title tooltips (1.5 seconds)
+        var trackTrigger = e.target.closest('.track-tooltip-trigger');
+        if (trackTrigger && trackTrigger !== activeTrackTrigger) {
+            // Clear previous tooltip
+            if (activeTrackTrigger) {
+                activeTrackTrigger.classList.remove('tooltip-active');
+            }
+            if (trackTooltipTimeout) clearTimeout(trackTooltipTimeout);
 
-    document.addEventListener('mouseleave', function(e) {
+            activeTrackTrigger = trackTrigger;
+            trackTrigger.classList.add('tooltip-active');
+
+            trackTooltipTimeout = setTimeout(function() {
+                trackTrigger.classList.remove('tooltip-active');
+                activeTrackTrigger = null;
+            }, 1500);
+        }
+    }, false);
+
+    document.addEventListener('mouseout', function(e) {
+        // Handle buy button tooltips
         var btn = e.target.closest('.buy-btn-inline, .buy-btn-top5');
-        if (!btn) return;
-
-        var tooltip = btn.querySelector('.tooltip-text');
-        if (!tooltip) return;
-
-        // Clear timeout and reset styles when mouse leaves
-        if (tooltipTimeout) {
-            clearTimeout(tooltipTimeout);
-            tooltipTimeout = null;
+        if (btn) {
+            var relatedTarget = e.relatedTarget;
+            if (!btn.contains(relatedTarget)) {
+                var tooltip = btn.querySelector('.tooltip-text');
+                if (tooltip) {
+                    if (buyBtnTimeout) {
+                        clearTimeout(buyBtnTimeout);
+                        buyBtnTimeout = null;
+                    }
+                    tooltip.style.visibility = '';
+                    tooltip.style.opacity = '';
+                }
+            }
         }
 
-        // Reset to CSS-controlled state
-        tooltip.style.visibility = '';
-        tooltip.style.opacity = '';
-    }, true);
+        // Handle track title tooltips
+        var trackTrigger = e.target.closest('.track-tooltip-trigger');
+        if (trackTrigger) {
+            var relatedTarget = e.relatedTarget;
+            if (!trackTrigger.contains(relatedTarget)) {
+                if (trackTooltipTimeout) {
+                    clearTimeout(trackTooltipTimeout);
+                    trackTooltipTimeout = null;
+                }
+                trackTrigger.classList.remove('tooltip-active');
+                if (activeTrackTrigger === trackTrigger) {
+                    activeTrackTrigger = null;
+                }
+            }
+        }
+    }, false);
 })();

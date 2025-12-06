@@ -508,6 +508,52 @@ button:disabled {
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
+    position: relative;
+    cursor: pointer;
+    padding: 2px 0;
+}
+
+/* Track visible text */
+.track-visible {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Track title tooltip */
+.track-tooltip-text {
+    display: none;
+    background-color: #333;
+    color: #fff !important;
+    text-align: left;
+    padding: 6px 10px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 9999;
+    bottom: calc(100% + 2px);
+    left: 0;
+    font-size: 11px;
+    white-space: normal;
+    max-width: 280px;
+    min-width: 200px;
+    line-height: 1.4;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    pointer-events: none;
+}
+
+.track-tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.track-tooltip-trigger:hover .track-tooltip-text,
+.track-tooltip-trigger.tooltip-active .track-tooltip-text {
+    display: block;
 }
 
 .queue-items li .buy-btn-inline {

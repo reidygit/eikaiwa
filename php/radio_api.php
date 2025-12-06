@@ -169,10 +169,11 @@ function getQueue($count = 5) {
     foreach ($upcomingIndices as $index) {
         if (isset($_SESSION['radio_all_tracks'][$index])) {
             $track = $_SESSION['radio_all_tracks'][$index];
-            // Only send title and artist for preview
+            // Send title, artist, and duration for preview
             $upcomingTracks[] = array(
                 'title' => $track['title'],
-                'artist' => $track['artist']
+                'artist' => $track['artist'],
+                'duration' => isset($track['duration']) ? $track['duration'] : 0
             );
         }
     }
