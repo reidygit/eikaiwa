@@ -1,38 +1,116 @@
+<style>
+.buy-btn-top5,
+.buy-btn-top5:link,
+.buy-btn-top5:visited {
+    background-color: #8C1414;
+    color: #FFFFFF !important;
+    border: none;
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15%;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+.buy-btn-top5:hover {
+    background-color: #6B0F0F;
+    color: #FFFFFF !important;
+}
+.buy-btn-top5 .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 100;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+.buy-btn-top5 .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -4px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+.buy-btn-top5:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+<script>
+// Auto-hide tooltips after 1.5 seconds
+document.addEventListener('mouseenter', function(e) {
+    var btn = e.target.closest('.buy-btn-top5');
+    if (!btn) return;
+    var tooltip = btn.querySelector('.tooltip-text');
+    if (!tooltip) return;
+    if (btn._tooltipTimeout) clearTimeout(btn._tooltipTimeout);
+    btn._tooltipTimeout = setTimeout(function() {
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.opacity = '0';
+    }, 1000);
+}, true);
+document.addEventListener('mouseleave', function(e) {
+    var btn = e.target.closest('.buy-btn-top5');
+    if (!btn) return;
+    var tooltip = btn.querySelector('.tooltip-text');
+    if (!tooltip) return;
+    if (btn._tooltipTimeout) {
+        clearTimeout(btn._tooltipTimeout);
+        btn._tooltipTimeout = null;
+    }
+    tooltip.style.visibility = '';
+    tooltip.style.opacity = '';
+}, true);
+</script>
 <table cellspacing="0" style="margin: 0px; padding: 0px; width: 276px; font-family: arial, helvetica, sans-serif; font-size: 12px; border: 1px solid #C6C47B">
 
 
 <tr>
 	<td style="margin: 0px; padding: 0px 2px 0px 4px; text-align: left; background: #F5F2D5;">1.&nbsp;<a href="http://store.eikaiwa.fm/index.php?action=detail&tid=8" target="new">動物の鳴き声</a></td>
 	<td style="margin: 0px; text-align: left; background: #F5F2D5;">¥99</td>
-	<td style="margin: 0px; text-align: left; background: #F5F2D5;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=8"><img src="../img/buy.gif" border="0" alt="" align="bottom" style="margin: 0px; padding: 0px;"/></a></td>
+	<td style="margin: 0px; text-align: center; background: #F5F2D5; padding: 2px;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=8" class="buy-btn-top5">購入<span class="tooltip-text">全レッスン購入</span></a></td>
 </tr>
 
 
 <tr>
 	<td style="margin: 0px; padding: 0px 2px 0px 4px; text-align: left; background: #fff;">2.&nbsp;<a href="http://store.eikaiwa.fm/index.php?action=detail&tid=286" target="new">日頃の会話 (パート３)</a></td>
 	<td style="margin: 0px; text-align: left; background: #fff;">¥99</td>
-	<td style="margin: 0px; text-align: left; background: #fff;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=286"><img src="../img/buy.gif" border="0" alt="" align="bottom" style="margin: 0px; padding: 0px;"/></a></td>
+	<td style="margin: 0px; text-align: center; background: #fff; padding: 2px;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=286" class="buy-btn-top5">購入<span class="tooltip-text">全レッスン購入</span></a></td>
 </tr>
 
 
 <tr>
 	<td style="margin: 0px; padding: 0px 2px 0px 4px; text-align: left; background: #F5F2D5;">3.&nbsp;<a href="http://store.eikaiwa.fm/index.php?action=detail&tid=263" target="new">ビジネスの動詞 (パート 3)</a></td>
 	<td style="margin: 0px; text-align: left; background: #F5F2D5;">¥99</td>
-	<td style="margin: 0px; text-align: left; background: #F5F2D5;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=263"><img src="../img/buy.gif" border="0" alt="" align="bottom" style="margin: 0px; padding: 0px;"/></a></td>
+	<td style="margin: 0px; text-align: center; background: #F5F2D5; padding: 2px;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=263" class="buy-btn-top5">購入<span class="tooltip-text">全レッスン購入</span></a></td>
 </tr>
 
 
 <tr>
 	<td style="margin: 0px; padding: 0px 2px 0px 4px; text-align: left; background: #fff;">4.&nbsp;<a href="http://store.eikaiwa.fm/index.php?action=detail&tid=288" target="new">日頃の会話 (パート５)</a></td>
 	<td style="margin: 0px; text-align: left; background: #fff;">¥99</td>
-	<td style="margin: 0px; text-align: left; background: #fff;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=288"><img src="../img/buy.gif" border="0" alt="" align="bottom" style="margin: 0px; padding: 0px;"/></a></td>
+	<td style="margin: 0px; text-align: center; background: #fff; padding: 2px;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=288" class="buy-btn-top5">購入<span class="tooltip-text">全レッスン購入</span></a></td>
 </tr>
 
 
 <tr>
 	<td style="margin: 0px; padding: 0px 2px 0px 4px; text-align: left; background: #F5F2D5;">5.&nbsp;<a href="http://store.eikaiwa.fm/index.php?action=detail&tid=166" target="new">映画の単語</a></td>
 	<td style="margin: 0px; text-align: left; background: #F5F2D5;">¥99</td>
-	<td style="margin: 0px; text-align: left; background: #F5F2D5;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=166"><img src="../img/buy.gif" border="0" alt="" align="bottom" style="margin: 0px; padding: 0px;"/></a></td>
+	<td style="margin: 0px; text-align: center; background: #F5F2D5; padding: 2px;"><a href="http://store.eikaiwa.fm/index.php?action=detail&tid=166" class="buy-btn-top5">購入<span class="tooltip-text">全レッスン購入</span></a></td>
 </tr>
 
 

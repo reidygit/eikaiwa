@@ -47,8 +47,11 @@
 
 	<!-- Now Playing Display -->
 	<div id="now-playing">
-		<div id="track-title">Eikaiwa.fm Radio</div>
-		<div id="track-artist">英会話リスニング</div>
+		<div id="now-playing-text">
+			<div id="track-title">Eikaiwa.fm Radio</div>
+			<div id="track-artist">英会話リスニング</div>
+		</div>
+		<a href="#" class="buy-btn-inline" id="now-playing-buy">購入<span class="tooltip-text">全レッスン購入</span></a>
 	</div>
 
 	<!-- Progress Bar & Time Display -->
@@ -92,18 +95,6 @@
 	<div id="queue-display">
 		<div class="queue-header">Coming Up:</div>
 		<div id="queue-list">Loading queue...</div>
-	</div>
-
-	<!-- Lesson Info Panel -->
-	<div id="lesson-info">
-		<div class="info-header">Lesson Info:</div>
-		<div id="lesson-details">
-			<div id="lesson-category">Category: -</div>
-			<div id="lesson-duration">Duration: -</div>
-		</div>
-		<a href="<? print STORE_URL; ?>" target="_blank" id="store-link">
-			<button id="buy-btn">🛒 Buy Full Lesson - ¥99</button>
-		</a>
 	</div>
 </div>
 <!-- END EIKAIWA.FM RADIO PLAYER -->

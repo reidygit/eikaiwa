@@ -7,10 +7,12 @@
     font-family: Arial, sans-serif;
     font-size: 12px;
     text-align: center;
-    padding: 2px 8px 8px 8px;
+    padding: 2px 2px 8px 2px;
     background-color: #FFFFFF;
-    max-width: 280px;
+    max-width: 100%;
+    width: calc(100% - 4px);
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* Now Playing Section */
@@ -20,6 +22,8 @@
     background-color: #f9f9f9;
     border: 1px solid #C6C47B;
     border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #track-title {
@@ -286,6 +290,10 @@
     border: 1px solid #C6C47B;
     border-radius: 3px;
     text-align: left;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .queue-header {
@@ -297,22 +305,29 @@
 }
 
 #queue-list {
-    font-size: 9px;
+    font-size: 12px;
     color: #555;
+    overflow: visible;
+    font-family: arial, helvetica, sans-serif;
 }
 
 .queue-items {
     list-style: none;
     margin: 0;
     padding: 0;
+    overflow: visible;
 }
 
 .queue-items li {
-    padding: 3px 0;
-    border-bottom: 1px dotted #C6C47B;
+    padding: 4px 4px;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: visible;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.queue-items li:nth-child(odd) {
+    background-color: #F5F2D5;
 }
 
 .queue-items li:last-child {
@@ -431,4 +446,106 @@ button:disabled {
     background-color: #CCC !important;
     cursor: not-allowed;
     opacity: 0.6;
+}
+
+/* Compact inline buy button for track listings */
+.buy-btn-inline,
+.buy-btn-inline:link,
+.buy-btn-inline:visited {
+    background-color: #8C1414;
+    color: #FFFFFF !important;
+    border: none;
+    padding: 2px 6px;
+    font-size: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15%;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.buy-btn-inline:hover {
+    background-color: #6B0F0F;
+    color: #FFFFFF !important;
+}
+
+.buy-btn-inline:active {
+    background-color: #4A0A0A;
+}
+
+/* Now Playing buy button - right aligned */
+#now-playing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#now-playing-text {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+#now-playing .buy-btn-inline {
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+/* Queue items with buy button */
+.queue-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: visible;
+}
+
+.queue-items li .track-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.queue-items li .buy-btn-inline {
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+/* Custom tooltip that auto-hides */
+.buy-btn-inline .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 100;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.buy-btn-inline .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -4px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.buy-btn-inline:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }

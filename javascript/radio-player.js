@@ -52,6 +52,21 @@ var EikaiwaRadio = (function() {
     };
 
     /**
+     * Format track title for display (removes double underscores)
+     */
+    function formatTitle(title) {
+        if (!title) return 'Unknown Track';
+        var formatted = title.replace(/__/g, '　');
+        // Add 見本 label - insert before closing ) if present, otherwise append
+        if (formatted.endsWith(')')) {
+            formatted = formatted.slice(0, -1) + ' 見本)';
+        } else {
+            formatted = formatted + '(見本)';
+        }
+        return formatted;
+    }
+
+    /**
      * Initialize the player
      */
     function init() {
@@ -576,7 +591,7 @@ var EikaiwaRadio = (function() {
      */
     function updateNowPlaying(track) {
         if (elements.trackTitle) {
-            elements.trackTitle.textContent = track.title || 'Unknown Track';
+            elements.trackTitle.textContent = formatTitle(track.title);
         }
 
         if (elements.trackArtist) {
@@ -708,7 +723,7 @@ var EikaiwaRadio = (function() {
      * Load upcoming queue from API
      */
     function loadUpcomingQueue() {
-        fetch(apiUrl + '?action=queue&count=5')
+        fetch(apiUrl + '?action=queue&count=8')
             .then(function(response) {
                 return response.json();
             })
@@ -735,7 +750,8 @@ var EikaiwaRadio = (function() {
 
         var html = '<ul class="queue-items">';
         queue.forEach(function(track, index) {
-            html += '<li>' + (index + 1) + '. ' + track.title + '</li>';
+            html += '<li><span class="track-name">' + (index + 1) + '. ' + formatTitle(track.title) + '</span>';
+            html += '<a href="#" class="buy-btn-inline" onclick="return false;">購入<span class="tooltip-text">全レッスン購入</span></a></li>';
         });
         html += '</ul>';
 
@@ -760,3 +776,45 @@ if (document.readyState === 'loading') {
 } else {
     EikaiwaRadio.init();
 }
+
+// Auto-hide tooltips after 1.5 seconds
+(function() {
+    var tooltipTimeout = null;
+
+    document.addEventListener('mouseenter', function(e) {
+        var btn = e.target.closest('.buy-btn-inline, .buy-btn-top5');
+        if (!btn) return;
+
+        var tooltip = btn.querySelector('.tooltip-text');
+        if (!tooltip) return;
+
+        // Clear any existing timeout
+        if (tooltipTimeout) {
+            clearTimeout(tooltipTimeout);
+        }
+
+        // Auto-hide after 1 second
+        tooltipTimeout = setTimeout(function() {
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = '0';
+        }, 1000);
+    }, true);
+
+    document.addEventListener('mouseleave', function(e) {
+        var btn = e.target.closest('.buy-btn-inline, .buy-btn-top5');
+        if (!btn) return;
+
+        var tooltip = btn.querySelector('.tooltip-text');
+        if (!tooltip) return;
+
+        // Clear timeout and reset styles when mouse leaves
+        if (tooltipTimeout) {
+            clearTimeout(tooltipTimeout);
+            tooltipTimeout = null;
+        }
+
+        // Reset to CSS-controlled state
+        tooltip.style.visibility = '';
+        tooltip.style.opacity = '';
+    }, true);
+})();
